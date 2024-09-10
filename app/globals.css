@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Sinosans';
+  src: url('/fonts/Sinosans.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -24,4 +31,12 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+#headingg{
+  font-size: 200px;
+  font-weight: 700;
+  line-height: 201.8px;
+  text-align: left;
+  font-family: 'Sinosans', sans-serif;
 }

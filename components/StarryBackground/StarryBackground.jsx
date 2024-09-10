@@ -14,7 +14,7 @@ const generateStars = (count) => {
     return stars;
 };
 
-function StarryBackground() {
+const StarryBackground = ({ extraClass }) => {
     useEffect(() => {
         const stars1 = generateStars(700); // Small stars
         const stars2 = generateStars(200); // Medium stars
@@ -28,14 +28,14 @@ function StarryBackground() {
     `;
         document.head.appendChild(styleElement);
     }, []);
-  return (
-        <div className='homepage'>
+
+    return (
+        <div className={`homepage ${extraClass || ""}`} >
             <div id="stars"></div>
             <div id="stars2"></div>
             <div id="stars3"></div>
         </div>
+    );
+};
 
-  )
-}
-
-export default StarryBackground
+export default StarryBackground;
