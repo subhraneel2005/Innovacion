@@ -12,9 +12,9 @@ function Navbar() {
         <span>Contact Us</span>
       </div>
 
-      <div className='flex'>
-        <img src="/public/iemLogo.webp" alt="iemLogo" className='lg:mr-7' />
-        <img src="/public/innovacionLogo.webp" alt="InnovacionLogo" />
+      <div className='flex justify-center max-w-[10rem]'>
+        <img src="/Logo/iemLogo.webp" alt="iemLogo" className='h-full lg:mr-7' />
+        <img src="/Logo/innovacionLogo.webp" alt="InnovacionLogo" className='h-full' />
       </div>
 
       <RegisterBtn />
