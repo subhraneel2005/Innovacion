@@ -18,7 +18,7 @@ function Events() {
       >
         <h2 className="text-[3.2rem] font-bold mb-4">About us</h2>
         <p className="text-base leading-6 text-gray-300">
-          Institute of Engineering & Management, Kolkata in association with University of Engineering & Management is organizing its Annual Techno-Management Fest "Innovation 2024" from 08th - 10th March, 2024. Innovation ignites minds ablaze, a vibrant fusion of tech brilliance and creative marvel. Students showcase prowess, ideas on display. A celebration where innovation takes the stage each day. Let's explore the madness of the metaverse by scrolling down.
+          Institute of Engineering and Management, Kolkata in association with University of Engineering and Management is organizing its Annual Techno-Management Fest Innovation 2024 from 08th to 10th March, 2024. Innovation ignites minds ablaze, a vibrant fusion of tech brilliance and creative marvel. Students showcase prowess, ideas on display. A celebration where innovation takes the stage each day. Lets explore the madness of the metaverse by scrolling down.
         </p>
       </div>
 
