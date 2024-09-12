@@ -9,7 +9,7 @@ function Footer() {
         <img src="/Logo/innovacionLogo.webp" alt="innovacion logo" className='w-40 h-40' />
       </div>
 
-      <div className='text-[15px] text-gray-200'>© Copyright INNOVACIÓN 2024. All Rights Reserved</div>
+      <div className='text-[15px] text-gray-200 font-[Tasa-Regular]'>© Copyright INNOVACIÓN 2024. All Rights Reserved</div>
 
       {/* Icons */}
       <div className='flex gap-3'>

@@ -40,7 +40,7 @@ const ReviewCard = ({ img, name }) => {
     >
       <div className="flex flex-col items-center justify-center ">
         <img src={img} alt={name} className="w-40 h-40" />
-        <h1 className="text-gray-100 font-bold text-2xl mt-2">Brand</h1>
+        <h1 className="text-gray-100 font-[Tasa-SemiBold] text-2xl mt-2">Brand</h1>
       </div>
     </figure>
   );

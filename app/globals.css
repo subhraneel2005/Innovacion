@@ -11,4 +11,8 @@
     font-family: Tasa-SemiBold;
     src: url("./fonts/TASAOrbiterText-SemiBold.otf");
   }
+  @font-face {
+    font-family: Tasa-Regular;
+    src: url("./fonts/TASAOrbiterDeck-Regular.otf");
+  }
 }
