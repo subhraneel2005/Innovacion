@@ -1,41 +1,41 @@
 .homepage {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    z-index: -1;
-    overflow: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+  /* background: radial-gradient(circle at bottom, #16423c 0%, #000 100%); */
+}
+
+#stars,
+#stars2,
+#stars3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+/* Mobile screen styles */
+@media (max-width: 768px) {
+  html,
+  body {
     background: radial-gradient(circle at bottom, #16423c 0%, #000 100%);
   }
-  
+
   #stars,
   #stars2,
   #stars3 {
-    position: absolute;
-    top: 0;
-    left: 0;
+    transform: scale(0.5); /* Reduce size of stars for mobile */
   }
-  
-  @keyframes animStar {
-    from {
-      transform: translateY(0px);
-    }
-    to {
-      transform: translateY(-2000px);
-    }
-  }
-  
-  /* Mobile screen styles */
-  @media (max-width: 768px) {
-    html,
-    body {
-      background: radial-gradient(circle at bottom, #16423c 0%, #000 100%);
-    }
-  
-    #stars,
-    #stars2,
-    #stars3 {
-      transform: scale(0.5); /* Reduce size of stars for mobile */
-    }
-  }
+}
