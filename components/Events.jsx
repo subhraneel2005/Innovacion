@@ -8,7 +8,6 @@ function Events() {
     <div className="min-h-screen w-full rounded-[40px] relative -top-[40px] border-2 border-[#16423C] lg:px-[108px]" >
       <StarryBackground extraClass={"z-10 top-0 left-0 right-0 bottom-0 rounded-[40px] bg-[radial-gradient(circle_at_bottom,#000_0%,#000_100%)]"} />
 
-      {/* About Us Section */}
       <GradientBox extraClass="mb-8 flex justify-center items-center flex-col">
         <h2 className="text-[3.2rem] font-bold mb-4 text-white">About us</h2>
         <p className="text-base leading-6 text-gray-300 text-center">
