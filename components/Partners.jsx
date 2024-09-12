@@ -4,38 +4,26 @@ import Marquee from "@/components/magicui/marquee";
 const reviews = [
   {
     name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
     img: "https://avatar.vercel.sh/jack",
   },
   {
     name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
     img: "https://avatar.vercel.sh/jill",
   },
   {
     name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
     img: "https://avatar.vercel.sh/john",
   },
   {
     name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
     img: "https://avatar.vercel.sh/jane",
   },
   {
     name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
     img: "https://avatar.vercel.sh/jenny",
   },
   {
     name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
     img: "https://avatar.vercel.sh/james",
   },
 ];
@@ -43,44 +31,32 @@ const reviews = [
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
-const ReviewCard = ({ img, name, username, body }) => {
+const ReviewCard = ({ img, name }) => {
   return (
     <figure
       className={cn(
-        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-white hover:bg-gray-100", // Change hover background color to non-transparent
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-900 dark:hover:bg-gray-800", // Adjust hover background color in dark mode
+        "relative cursor-pointer overflow-hidden rounded-xl bg-[#0F0F0F] border border-[#16423C] p-4 ml-20 shadow-[0px_0px_20px_rgba(22,66,60,1)]",
       )}
     >
-      <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
-            {name}
-          </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
-        </div>
+      <div className="flex flex-col items-center justify-center ">
+        <img src={img} alt={name} className="w-40 h-40" />
+        <h1 className="text-gray-100 font-[Tasa-SemiBold] text-2xl mt-2">Brand</h1>
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
     </figure>
   );
 };
 
-
-
 export function MarqueeDemo() {
   return (
-    <div className="relative flex h-[500px] -mt-[70px] w-full flex-col items-center justify-center overflow-hidden bg-transparent md:shadow-xl">
-      <Marquee pauseOnHover className="bg-transparent [--duration:20s]">
+    <div className="relative flex min-h-[700px] -mt-[70px] w-full flex-col items-center justify-center overflow-hidden bg-transparent">
+      <Marquee pauseOnHover className="bg-transparent [--duration:20s] mb-4">
         {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
+          <ReviewCard key={review.name} {...review} />
         ))}
       </Marquee>
       <Marquee reverse pauseOnHover className="bg-transparent [--duration:20s]">
         {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
+          <ReviewCard key={review.name} {...review} />
         ))}
       </Marquee>
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-transparent"></div>
