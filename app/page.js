@@ -13,7 +13,7 @@ export default function Home() {
       <Events />
       <Gallery />
       <MediaCoverage />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

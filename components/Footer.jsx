@@ -3,14 +3,14 @@ import { FaTwitter, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
 
 function Footer() {
   return (
-    <div className='py-12 px-4 w-full flex justify-evenly items-center'>
+    <div className='py-12 px-4 w-full flex justify-evenly items-center mb-10'>
       <div className='flex gap-3'>
-        <img src="/iemLogo.webp" alt="iem logo" className='w-[115px] h-[80px]' />
-        <img src="/innovacionLogo.webp" alt="innovacion logo" className='w-[100px] h-[70px]' />
+        <img src="/Logo/iemLogo.webp" alt="iem logo" className='w-40 h-40 mr-10' />
+        <img src="/Logo/innovacionLogo.webp" alt="innovacion logo" className='w-40 h-40' />
       </div>
 
       <div className='text-[15px] text-gray-200'>© Copyright INNOVACIÓN 2024. All Rights Reserved</div>
-      
+
       {/* Icons */}
       <div className='flex gap-3'>
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className='transition-transform duration-300 hover:scale-110'>
