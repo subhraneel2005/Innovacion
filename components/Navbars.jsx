@@ -1,8 +1,6 @@
 import React from 'react'
 import RegisterBtn from './RegisterBtn'
 
-
-
 function Navbars() {
   return (
     <div className='h-[4.5rem] w-max-full flex justify-between rounded-[10px] border-[#6A9C89] border-2 p-2 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 lg:mx-40 lg:my-5'>
@@ -15,8 +13,8 @@ function Navbars() {
       </div>
 
       <div className='flex'>
-        <img src={IemLogo} alt="iemLogo" className='lg:mr-7' />
-        <img src={InnovacionLogo} alt="InnovacionLogo" />
+        <img src="./iemLogo.webp" alt="iemLogo" className='lg:mr-7' />
+        <img src="./innovacionLogo.webp" alt="InnovacionLogo" />
       </div>
 
       <RegisterBtn />
