@@ -1,5 +1,6 @@
 import React from 'react';
 import StarryBackground from './StarryBackground/StarryBackground';
+import { FocusCardsDemo } from './FocusCardsDemo';
 
 function Events() {
   return (
@@ -28,19 +29,8 @@ function Events() {
         }}
       >
         <h2 className="text-[3.2rem] font-bold mb-4 text-center">Events</h2>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16'>
-          {Array.from({ length: 6 }).map((_, index) => (
-            <div
-              key={index}
-              className="relative overflow-hidden bg-[#0f192b] rounded-lg shadow-lg"
-            >
-              <img
-                src="/eventBox.png"
-                alt="Event"
-                className="w-[320px] h-[455px] object-cover rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer"
-              />
-            </div>
-          ))}
+        <div>
+         <FocusCardsDemo className='cursor-pointer'/>
         </div>
       </div>
     </div>

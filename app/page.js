@@ -3,6 +3,8 @@ import StarryBackground from "@/components/StarryBackground/StarryBackground";
 import Events from "@/components/Events";
 import Homepage from "@/components/Homepage";
 import Memories from "@/components/Memories";
+import Media from "@/components/Media";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -19,6 +21,8 @@ export default function Home() {
 
       <Events />
       <Memories/>
+      <Media/>
+      <Footer/>
     </div>
   );
 }
