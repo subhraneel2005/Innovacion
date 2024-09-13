@@ -3,7 +3,7 @@ import { FaTwitter, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
 
 function Footer() {
   return (
-    <div className='py-12 px-4 w-full flex justify-evenly items-center mb-10'>
+    <div className='relative -top-[40px] px-4 w-full flex justify-evenly items-center mb-10'>
       <div className='flex gap-3'>
         <img src="/Logo/iemLogo.webp" alt="iem logo" className='w-40 h-40 mr-10' />
         <img src="/Logo/innovacionLogo.webp" alt="innovacion logo" className='w-40 h-40' />
