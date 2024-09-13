@@ -4,6 +4,7 @@ import Homepage from "@/components/Homepage";
 import Gallery from "@/components/Gallery/Gallery";
 import MediaCoverage from "@/components/MediaCoverage/MediaCoverage";
 import Footer from "@/components/Footer";
+import Gallery1 from "@/components/Gallery/Gallery1";
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
       <Navbar />
       <Homepage />
       <Events />
-      <Gallery />
+      {/* <Gallery /> */}
+      <Gallery1 />
       <MediaCoverage />
       <Footer />
     </div>

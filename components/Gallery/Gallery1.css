@@ -1,0 +1,30 @@
+.slider {
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.slider-item {
+  flex: 0 0 40vw;
+  height: 100%;
+  padding: 0 3vw;
+  box-sizing: border-box;
+}
+
+.slider-item figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.slider-item figure img {
+  width: 100%;
+  object-fit: cover;
+}
