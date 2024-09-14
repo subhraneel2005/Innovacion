@@ -3,33 +3,33 @@ import { FocusCards } from "@/components/ui/focus-cards";
 export function FocusCardsDemo() {
   const cards = [
     {
-      title: "Event 1",
-      src: "/Events/e1.png",
+      title: "Robotics",
+      src: "/Events/robotics.webp",
       price: 200
     },
     {
-      title: "Event 2",
-      src: "/Events/e2.png",
+      title: "Exhibition",
+      src: "/Events/exhibition.webp",
       price: 200
     },
     {
-      title: "Event 3",
-      src: "/Events/e3.png",
+      title: "Hackathon",
+      src: "/Events/hackathon.webp",
       price: 200
     },
     {
-      title: "Event 4",
-      src: "/Events/e4.png",
+      title: "Gaming",
+      src: "/Events/gaming.webp",
       price: 200
     },
     {
-      title: "Event 5",
-      src: "/Events/e5.png",
+      title: "Management",
+      src: "/Events/Management.webp",
       price: 200
     },
     {
-      title: "Event 6",
-      src: "/Events/e6.png",
+      title: "Others",
+      src: "/Events/Others.webp",
       price: 200
     },
   ];
