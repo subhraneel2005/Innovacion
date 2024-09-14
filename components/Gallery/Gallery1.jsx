@@ -192,7 +192,7 @@ const Gallery1 = () => {
     }
 
     return (
-        <div className='w-full h-screen overflow-hidden flex justify-center items-center bg-[#000] relative -top-[80px] '>
+        <div id='gallery' className='w-full h-screen overflow-hidden flex justify-center items-center bg-[#000] relative -top-[80px] '>
             <div className='slider w-full h-full' ref={sliderRef}>
                 <h1 className='text-[3.2rem] font-[Tasa-SemiBold] mt-20 text-white text-center'>Gallery</h1>
                 <div className="slider-wrapper h-full pb-[280px]" ref={wrapperRef}>

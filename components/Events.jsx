@@ -5,7 +5,7 @@ import GradientBox from './GradientBox';
 
 function Events() {
   return (
-    <div className="min-h-screen w-full rounded-[40px] relative z-10 -top-[40px] border-2 border-[#16423C] lg:px-[108px] shadow-[0px_0px_20px_rgba(22,66,60,1)]" >
+    <div id='events' className="min-h-screen w-full rounded-[40px] relative z-10 -top-[40px] border-2 border-[#16423C] lg:px-[108px] shadow-[0px_0px_20px_rgba(22,66,60,1)]" >
       <StarryBackground extraClass={"z-10 top-0 left-0 right-0 bottom-0 rounded-[40px] bg-[radial-gradient(circle_at_bottom,#000_0%,#000_100%)]"} />
 
       <GradientBox extraClass="mb-8 flex justify-center items-center flex-col">
@@ -17,7 +17,7 @@ function Events() {
       {/* Events Section */}
       <GradientBox>
         <h2 className="text-[3.2rem] font-[Tasa-SemiBold] mb-4 text-center text-white">Events</h2>
-        <div>
+        <div className='flex justify-center items-center '>
           <FocusCardsDemo className='cursor-pointer' />
         </div>
       </GradientBox>

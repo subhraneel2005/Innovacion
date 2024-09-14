@@ -6,7 +6,7 @@ import Media from './Media';
 
 function MediaCoverage() {
   return (
-    <div className="min-h-screen w-full rounded-[40px] relative z-20 -top-[120px] border-2 border-[#16423C]  shadow-[0px_0px_20px_rgba(22,66,60,1)]">
+    <div  id='partners' className="min-h-screen w-full rounded-[40px] relative z-20 -top-[120px] border-2 border-[#16423C]  shadow-[0px_0px_20px_rgba(22,66,60,1)]">
       <StarryBackground extraClass={"z-10 top-0 left-0 right-0 bottom-0 rounded-[40px] bg-[radial-gradient(circle_at_bottom,#000_0%,#000_100%)]"} />
 
       <GradientBox extraClass="mb-8 flex justify-center items-center flex-col lg:px-[108px]">
