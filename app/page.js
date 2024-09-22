@@ -7,18 +7,19 @@ import Gallery1 from "@/components/Gallery/Gallery1";
 import IndividualEvent from "@/components/IndividualEvent";
 import Lenis from 'lenis'
 import Navbar from '@/components/Navbar';
+import Nav from "@/components/Nav";
 
 export default function Home() {
 
 
   return (
-    <div className="w-full space-y-4">
-      <Navbar />
+    <div>
+      <Nav/>
       <Homepage />
       <Events />
-      <IndividualEvent/>
+      {/* <IndividualEvent/> */}
       {/* <Gallery /> */}
-      <Gallery1 />
+      {/* <Gallery1 /> */}
       <MediaCoverage />
       <Footer />
     </div>
