@@ -1,12 +1,9 @@
-"use client"
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import RegisterBtn from './RegisterBtn';
 
 function MobileNav() {
-  
 
   return (
     <div className='w-full md:hidden flex justify-center items-center'>

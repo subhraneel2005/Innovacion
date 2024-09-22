@@ -20,7 +20,7 @@ export default function Home() {
       {/* <IndividualEvent/> */}
       {/* <Gallery /> */}
       {/* <Gallery1 /> */}
-      <MediaCoverage />
+      {/* <MediaCoverage /> */}
       <Footer />
     </div>
   );
