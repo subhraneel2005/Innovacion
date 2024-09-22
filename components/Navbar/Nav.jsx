@@ -1,11 +1,11 @@
 import React from 'react'
-import AppNav from "@/components/AppNav";
-import Navbar from "@/components/Navbar";
+import MobileNav from './AppNav'
+import Navbar from './Navbar'
 
 function Nav() {
   return (
     <>
-        <AppNav/>
+        <MobileNav/>
         <Navbar/>
     </>
   )

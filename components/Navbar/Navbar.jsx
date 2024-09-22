@@ -1,8 +1,7 @@
 'use client'
 
 import React from 'react';
-import RegisterBtn from './RegisterBtn';
-import Button from './common/Button';
+import Button from '../common/Button';
 
 function Navbar() {
   // Scroll function to handle smooth scrolling

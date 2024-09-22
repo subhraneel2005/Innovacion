@@ -1,13 +1,12 @@
 import Events from "@/components/Events";
-import Homepage from "@/components/Homepage";
 import Gallery from "@/components/Gallery/Gallery";
 import MediaCoverage from "@/components/MediaCoverage/MediaCoverage";
 import Footer from "@/components/Footer";
 import Gallery1 from "@/components/Gallery/Gallery1";
 import IndividualEvent from "@/components/IndividualEvent";
 import Lenis from 'lenis'
-import Navbar from '@/components/Navbar';
-import Nav from "@/components/Nav";
+import Nav from "@/components/Navbar/Nav";
+import HomePage from "@/components/HomePage/Home";
 
 export default function Home() {
 
@@ -15,7 +14,7 @@ export default function Home() {
   return (
     <div>
       <Nav/>
-      <Homepage />
+      <HomePage/>
       <Events />
       {/* <IndividualEvent/> */}
       {/* <Gallery /> */}
