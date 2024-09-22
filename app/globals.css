@@ -16,3 +16,11 @@
     src: url("./fonts/TASAOrbiterDeck-Regular.otf");
   }
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
