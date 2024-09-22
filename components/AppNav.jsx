@@ -2,14 +2,15 @@ import React from 'react';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import RegisterBtn from './RegisterBtn';
+import Button from './common/Button';
 
 function MobileNav() {
 
   return (
     <div className='w-full md:hidden flex justify-center items-center'>
-      <div className='h-[4.5rem] w-[80%] flex justify-evenly rounded-[10px] border-[#6A9C89] border-2 p-2 backdrop-blur-xl mt-4'>
+      <div className='h-[4.5rem] w-[80%] flex justify-between rounded-[10px] border-[#6A9C89] border-2 p-2 backdrop-blur-xl mt-4'>
         {/* Logos */}
-        <div className='flex items-center max-w-[10rem]'>
+        <div className='flex items-center max-w-[10rem] pl-6'>
           <img
             src={"/Logo/iemLogo.webp"}
             alt={"iemLogo"}
@@ -24,7 +25,9 @@ function MobileNav() {
 
         {/* Register Button + Menu Icon */}
         <div className='flex items-center'>
-          <RegisterBtn />
+        <div className='cursor-pointer mr-2'>
+          <Button name={"Register"} color={"blue"}/>
+        </div>
 
           <div className="menu-icon-container ml-4">
             <div>

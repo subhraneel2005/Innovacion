@@ -2,6 +2,7 @@
 
 import React from 'react';
 import RegisterBtn from './RegisterBtn';
+import Button from './common/Button';
 
 function Navbar() {
   // Scroll function to handle smooth scrolling
@@ -27,7 +28,9 @@ function Navbar() {
         <img src="/Logo/innovacionLogo.webp" alt="InnovacionLogo" className='h-full' />
       </div>
 
-      <RegisterBtn />
+      <div className='cursor-pointer mr-2'>
+          <Button name={"Register"} color={"blue"}/>
+        </div>
     </div>
   );
 }
