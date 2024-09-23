@@ -5,7 +5,7 @@ import StarryBackground from '../StarryBackground/StarryBackground'
 
 function HomepageLarge() {
   return (
-    <div id='homepage' className="min-h-screen w-full flex justify-center items-center flex-col">
+    <div id='homepage' className="h-screen w-full realitve top-0 flex justify-center items-center flex-col">
       <StarryBackground extraClass="bg-[radial-gradient(circle_at_bottom,#16423C_0%,#000_100%)]" />
       <div className='z-10 text-center pb-4'>
         <h1 className="text-4xl md:text-7xl text-white font-[Quantum] px-6">INNOVACIÓN</h1>
