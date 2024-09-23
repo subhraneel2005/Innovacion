@@ -4,7 +4,7 @@ import { Button } from './ui/button'
 
 const RegisterBtn = () => {
     return (
-        <Button className='h-[52px] font-[Tasa-SemiBold] rounded-2xl text-white bg-[#16423c] lg:px-4'>
+        <Button className='h-[50px] md:h-[52px] z-10 font-[Tasa-SemiBold] rounded-xl text-white bg-[#16423c] px-4'>
             <span>Register Now!</span>
             <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
 
