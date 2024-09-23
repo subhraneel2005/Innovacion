@@ -8,7 +8,7 @@ function AppHome() {
       <StarryBackground extraClass="bg-[radial-gradient(circle_at_bottom,#16423C_0%,#000_100%)]" />
       {/* <StarryBackground /> */}
       <div className=' flex-col justify-center items-center space-y-9'>
-        <h1 className="text-2xl text-white font-[Quantum]">INNOVACIÓN</h1>
+        <h1 className="text-4xl text-white font-[Quantum] flex flex-wrap text-center">INNOVACIÓN 2025</h1>
         <div className='w-full flex justify-center'> 
           <RegisterBtn />  
         </div>

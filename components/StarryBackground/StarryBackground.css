@@ -27,15 +27,4 @@
 }
 
 /* Mobile screen styles */
-@media (max-width: 768px) {
-  html,
-  body {
-    background: radial-gradient(circle at bottom, #16423c 0%, #000 100%);
-  }
 
-  #stars,
-  #stars2,
-  #stars3 {
-    transform: scale(0.5); /* Reduce size of stars for mobile */
-  }
-}
