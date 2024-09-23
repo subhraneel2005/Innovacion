@@ -36,10 +36,4 @@
     z-index: 1;
     overflow: hidden;
   }
-
-  #stars,
-  #stars2,
-  #stars3 {
-    transform: scale(0.5); /* Reduce size of stars for mobile */
-  }
 }
