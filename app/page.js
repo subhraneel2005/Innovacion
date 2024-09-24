@@ -5,23 +5,21 @@ import Footer from "@/components/Footer";
 import Gallery1 from "@/components/Gallery/Gallery1";
 import IndividualEvent from "@/components/IndividualEvent";
 import Lenis from 'lenis'
-import Nav from "@/components/Navbar/Nav";
-import Homepage from "@/components/HomePage/Home";
-import NewAppNavCodepen from "@/components/HomePage/NewAppNavCodepen";
+import HomePage from "@/components/HomePage/Homepage";
+import Navbar from "@/components/Navbar/Navbar";
+import NavbarMobile from "@/components/Navbar/NavbarMobile";
 
 export default function Home() {
 
 
   return (
     <div>
-      
-      <NewAppNavCodepen/>
-      <Homepage/>
+      {/* <Navbar /> */}
+      {/* <NavbarMobile /> */}
+      <HomePage />
       <Events />
-      {/* <IndividualEvent/> */}
-      {/* <Gallery />
-      <Gallery1 /> */}
-       <MediaCoverage />
+      {/* <IndividualEvent /> */}
+      <MediaCoverage />
       <Footer />
     </div>
   );

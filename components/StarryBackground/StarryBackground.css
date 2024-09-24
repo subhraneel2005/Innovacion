@@ -4,9 +4,8 @@
   margin: 0;
   padding: 0;
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   overflow: hidden;
-  /* background: radial-gradient(circle at bottom, #16423c 0%, #000 100%); */
 }
 
 #stars,
@@ -22,9 +21,19 @@
     transform: translateY(0px);
   }
   to {
-    transform: translateY(-2000px);
+    transform: translateY(-8000px);
   }
 }
 
 /* Mobile screen styles */
-
+@media (max-width: 768px) {
+  .homepage {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+  }
+}

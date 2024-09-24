@@ -3,13 +3,13 @@ import { FaTwitter, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
 
 function Footer() {
   return (
-    <div className='relative -top-[40px] px-4 md:px-12 w-full flex flex-col md:flex-row justify-between items-center mb-10'>
-      <div className='flex flex-col md:flex-row items-center gap-3'>
+    <div className='relative -top-[40px] px-4 lg:px-40 md:px-20 w-full flex flex-col md:flex-row justify-between items-center mb-10 lg:mb-4'>
+      <div className='flex flex-row items-center gap-10 mb-4'>
         <img src="/Logo/iemLogo.webp" alt="iem logo" className='w-24 h-24 md:w-32 md:h-32' />
         <img src="/Logo/innovacionLogo.webp" alt="innovacion logo" className='w-24 h-24 md:w-32 md:h-32' />
       </div>
 
-      <div className='text-center md:text-left text-[15px] text-gray-200 font-[Tasa-Regular] my-2 md:my-0'>
+      <div className='text-center md:text-left text-xs text-gray-400 font-[Tasa-Regular] mb-4 md:my-0'>
         © Copyright INNOVACIÓN 2025. All Rights Reserved
       </div>
 

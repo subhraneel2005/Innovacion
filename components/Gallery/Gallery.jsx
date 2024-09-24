@@ -1,197 +1,130 @@
 "use client"
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { Flip } from 'gsap/Flip';
-import "./Gallery.css";
+import React, { useState, useEffect } from 'react';
+import { useSwipeable } from 'react-swipeable';
+import StarryBackground from '../StarryBackground/StarryBackground';
 
-const img1 = "/Gallery/01.webp";
-const img2 = "/Gallery/02.webp";
-const img3 = "/Gallery/03.webp";
-const img4 = "/Gallery/04.webp";
-const img5 = "/Gallery/05.webp";
-const img6 = "/Gallery/06.webp";
-const img7 = "/Gallery/07.webp";
-const img8 = "/Gallery/08.webp";
-const img9 = "/Gallery/09.webp";
-const img10 = "/Gallery/10.webp";
-const img11 = "/Gallery/11.webp";
-const img12 = "/Gallery/12.webp";
+const images = [
+  "/Gallery/01.webp",
+  "/Gallery/02.webp",
+  "/Gallery/03.webp",
+  "/Gallery/04.webp",
+  "/Gallery/05.webp",
+  "/Gallery/06.webp",
+  "/Gallery/07.webp",
+  "/Gallery/08.webp",
+  "/Gallery/09.webp",
+  "/Gallery/10.webp",
+  "/Gallery/11.webp",
+  "/Gallery/12.webp"
+];
 
-function Gallery() {
-  const galleryRef = useRef(null);
-  const imgPreviewRef = useRef(null);
-  const imgsRef = useRef([]);
+const ImageSlider = () => {
+  const [currentIndexTop, setCurrentIndexTop] = useState(0);
+  const [currentIndexBottom, setCurrentIndexBottom] = useState(images.length - 1); // Start bottom slider from the last image
 
-  let isImgPreviewOpen = false;
-  let activeImg = null;
-  let activeImgParent = null;
+  // Swipe handlers for the top slider
+  const handlersTop = useSwipeable({
+    onSwipedLeft: () => handleNextTop(),
+    onSwipedRight: () => handlePrevTop(),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
+
+  // Swipe handlers for the bottom slider
+  const handlersBottom = useSwipeable({
+    onSwipedLeft: () => handleNextBottom(),
+    onSwipedRight: () => handlePrevBottom(),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
 
   useEffect(() => {
-    const imgPreview = imgPreviewRef.current;
-    const imgs = imgsRef.current;
+    const intervalTop = setInterval(() => {
+      handleNextTop();
+    }, 2000);
 
-    imgs.forEach((img) => {
-      const theImgMask = img.querySelector(".wrap");
-      const theImg = img.querySelector("img");
-
-      img.addEventListener("click", () => {
-        const imgState = Flip.getState([theImgMask, theImg]);
-        gsap.set(imgPreview, { autoAlpha: 1 });
-        activeImg = theImgMask;
-        activeImgParent = theImgMask.parentNode;
-        imgPreview.appendChild(theImgMask);
-
-        Flip.from(imgState, {
-          duration: 1,
-          ease: "power3.inOut",
-          scale: true,
-          onStart: () => {
-            imgPreview.classList.add("imgPreview--active");
-          },
-          onComplete: () => {
-            isImgPreviewOpen = true;
-          }
-        });
-      });
-    });
-
-    const handleImgPreviewClick = (e) => {
-      if (!activeImg) return;
-
-      const activeImgState = Flip.getState([activeImg, activeImg.querySelector("img")]);
-
-      activeImgParent.appendChild(activeImg);
-
-      Flip.from(activeImgState, {
-        duration: 1,
-        ease: "power3.inOut",
-        absolute: true,
-        scale: true,
-        zIndex: 2000,
-        nested: true,
-        onStart: () => {
-          imgPreview.classList.remove("imgPreview--active");
-        },
-        onComplete: () => {
-          isImgPreviewOpen = false;
-          gsap.set(imgPreview, { autoAlpha: 0 });
-        }
-      });
-    };
-
-    imgPreview.addEventListener("click", handleImgPreviewClick);
+    const intervalBottom = setInterval(() => {
+      handleNextBottom();
+    }, 2000);
 
     return () => {
-      imgPreview.removeEventListener("click", handleImgPreviewClick);
+      clearInterval(intervalTop);
+      clearInterval(intervalBottom);
     };
-  }, []);
+  }, [currentIndexTop, currentIndexBottom]);
 
+  // Handle next and prev for the top slider (right to left)
+  const handleNextTop = () => {
+    setCurrentIndexTop((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const handlePrevTop = () => {
+    setCurrentIndexTop((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  // Handle next and prev for the bottom slider (right to left but starting from the last image)
+  const handleNextBottom = () => {
+    setCurrentIndexBottom((prevIndex) => (prevIndex + 1) % images.length); // Same right-to-left motion
+  };
+
+  const handlePrevBottom = () => {
+    setCurrentIndexBottom((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
 
   return (
-    <div className='h-[90vh] relative w-full overflow-y-auto bg-[#0f0f0f]' ref={galleryRef}>
-      <div className='header'>
-        <div className='imgPreview' ref={imgPreviewRef}></div>
-        <div className='imgContainer noImg'></div>
+    <div className='h-screen w-full relative'>
+      {/* Background */}
+      <StarryBackground extraClass={"z-10 -top-[72px] left-0 right-0 bottom-0 bg-[radial-gradient(circle_at_bottom,#000_0%,#000_100%)]"} />
 
-        <div className='imgContainer'>
-          <div className='wrap' ref={(el) => imgsRef.current.push(el)}>
-            <img src={img1} alt="1" />
-          </div>
+      {/* Top Slider (Right to Left) */}
+      <div
+        {...handlersTop}
+        className="relative z-20 h-[40%] w-full overflow-hidden mx-auto px-10"
+      >
+        <h1 className='text-4xl md:text-[3.2rem] font-[Tasa-SemiBold] mt-2 mb-6 text-white text-center'>Gallery Top</h1>
+        <div
+          className="w-full flex transition-transform duration-500 ease-in-out rounded-xl"
+          style={{ transform: `translateX(-${currentIndexTop * 100}%)` }}
+        >
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`Slide ${index + 1}`}
+              loading='lazy'
+              className="w-full mx-2 object-cover rounded-xl border-2 border-[#16423C] shadow-[0px_0px_20px_rgba(22,66,60,1)]"
+            />
+          ))}
         </div>
+      </div>
 
-        <div className='imgContainer noImg'></div>
-        <div className='imgContainer noImg'></div>
-        <div className='imgContainer noImg'></div>
-
-        <div className='imgContainer'>
-          <div className='wrap' ref={(el) => imgsRef.current.push(el)}>
-            <img src={img2} alt="2" />
-          </div>
-        </div>
-
-        <div className='imgContainer noImg'></div>
-
-        <div className='imgContainer'>
-          <div className='wrap' ref={(el) => imgsRef.current.push(el)}>
-            <img src={img3} alt="3" />
-          </div>
-        </div>
-
-        <div className='imgContainer'>
-          <div className='wrap' ref={(el) => imgsRef.current.push(el)}>
-            <img src={img4} alt="4" />
-          </div>
-        </div>
-
-        <div className='imgContainer noImg'></div>
-        <div className='imgContainer noImg'></div>
-
-        <div className='imgContainer'>
-          <div className='wrap' ref={(el) => imgsRef.current.push(el)}>
-            <img src={img5} alt="5" />
-          </div>
-        </div>
-
-        <div className='imgContainer'>
-          <div className='wrap' ref={(el) => imgsRef.current.push(el)}>
-            <img src={img6} alt="6" />
-          </div>
-        </div>
-
-        <div className='imgContainer noImg'></div>
-
-        <div className='imgContainer'>
-          <div className='wrap' ref={(el) => imgsRef.current.push(el)}>
-            <img src={img7} alt="7" />
-          </div>
-        </div>
-
-        <div className='imgContainer noImg'></div>
-        <div className='imgContainer noImg'></div>
-        <div className='imgContainer noImg'></div>
-
-        <div className='imgContainer'>
-          <div className='wrap' ref={(el) => imgsRef.current.push(el)}>
-            <img src={img8} alt="8" />
-          </div>
-        </div>
-
-        <div className='imgContainer noImg'></div>
-        <div className='imgContainer noImg'></div>
-        <div className='imgContainer noImg'></div>
-        <div className='imgContainer noImg'></div>
-
-        <div className='imgContainer'>
-          <div className='wrap' ref={(el) => imgsRef.current.push(el)}>
-            <img src={img9} alt="9" />
-          </div>
-        </div>
-
-        <div className='imgContainer'>
-          <div className='wrap' ref={(el) => imgsRef.current.push(el)}>
-            <img src={img10} alt="10" />
-          </div>
-        </div>
-
-        <div className='imgContainer noImg'></div>
-        <div className='imgContainer noImg'></div>
-
-        <div className='imgContainer'>
-          <div className='wrap' ref={(el) => imgsRef.current.push(el)}>
-            <img src={img11} alt="11" />
-          </div>
-        </div>
-
-        <div className='imgContainer noImg'></div>
-
-        <div className='imgContainer'>
-          <div className='wrap' ref={(el) => imgsRef.current.push(el)}>
-            <img src={img12} alt="12" />
-          </div>
+      {/* Bottom Slider (Right to Left, Start from Last Image) */}
+      <div
+        {...handlersBottom}
+        className="relative z-20 h-[40%] w-full overflow-hidden mx-auto px-10 mt-10"
+      >
+        <h1 className='text-4xl md:text-[3.2rem] font-[Tasa-SemiBold] mt-2 mb-6 text-white text-center'>Gallery Bottom</h1>
+        <div
+          className="w-full flex transition-transform duration-500 ease-in-out rounded-xl"
+          style={{ transform: `translateX(-${currentIndexBottom * 100}%)` }}
+        >
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`Slide ${index + 1}`}
+              loading='lazy'
+              className="w-full mx-2 object-cover rounded-xl border-2 border-[#16423C] shadow-[0px_0px_20px_rgba(22,66,60,1)]"
+            />
+          ))}
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Gallery;
+export default ImageSlider;

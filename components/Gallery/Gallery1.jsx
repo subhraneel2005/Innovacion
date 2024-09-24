@@ -192,13 +192,13 @@ const Gallery1 = () => {
     }
 
     return (
-        <div id='gallery' className='w-full h-screen overflow-hidden flex justify-center items-center bg-[#000] relative -top-[80px] '>
-            <div className='slider w-full h-full' ref={sliderRef}>
-                <h1 className='text-[3.2rem] font-[Tasa-SemiBold] mt-20 text-white text-center'>Gallery</h1>
-                <div className="slider-wrapper h-full pb-[280px]" ref={wrapperRef}>
+        <div id='gallery' className='w-full h-screen md:h-screen overflow-hidden flex justify-center bg-[#000] relative -top-[80px] border-2 border-yellow-300'>
+            <div className='slider w-full min-h-1/2 border-rose-400 border-2' ref={sliderRef}>
+                <h1 className='text-4xl md:text-[3.2rem] font-[Tasa-SemiBold] mt-20 text-white text-center'>Gallery</h1>
+                <div className="slider-wrapper h-1/2 md:pb-[280px] border-green-400 border-2" ref={wrapperRef}>
                     {images.map((img, index) => (
-                        <div className="slider-item h-full" key={index}>
-                            <figure className="relative w-full h-1/2 flex justify-center items-center">
+                        <div className="slider-item h-1/2 border-blue-400 border-2" key={index}>
+                            <figure className="relative w-full h-[100px] flex justify-center items-center border-rose-400 border-2">
                                 <img
                                     src={img}
                                     alt={`Gallery image ${index + 1}`}
