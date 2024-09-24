@@ -4,11 +4,14 @@ import { useState } from 'react';
 import GradientBox from './GradientBox';
 import StarryBackground from './StarryBackground/StarryBackground';
 import { Data } from './EventsData';
-import { FaLongArrowAltRight } from "react-icons/fa"; // Importing the icon
+import { FaLongArrowAltRight } from "react-icons/fa"; 
 import RegisterBtn from './RegisterBtn';
+import { useSearchParams } from 'next/navigation';
 
 function IndividualEvent() {
-    const [selectedEventIndex, setSelectedEventIndex] = useState(0);
+    const searchParams = useSearchParams(); 
+    const eventId = searchParams.get('id');
+    const [selectedEventIndex, setSelectedEventIndex] = useState(eventId-1);
     const [subEventIndex, setSubEventIndex] = useState(0);
 
     const changeEventHandler = (index) => {
@@ -17,7 +20,7 @@ function IndividualEvent() {
     }
 
     const currentEvent = Data[selectedEventIndex];
-    const currentSubEvents = currentEvent.subEvents;
+    const currentSubEvents = currentEvent ? currentEvent.subEvents : [];
 
     const nextSubEvent = () => {
         if (subEventIndex < currentSubEvents.length - 1) {
@@ -40,10 +43,10 @@ function IndividualEvent() {
             <div className="flex space-x-4 mb-6 relative z-20">
                 {Data.map((event, index) => (
                     <button
-                        key={event.id}
+                        key={event?.id}
                         onClick={() => changeEventHandler(index)}
                         className={`px-4 py-2 rounded ${selectedEventIndex === index ? 'border-[1px] border-[#16423c] shadow-[0px_0px_20px_rgba(22,66,60,1)]' : 'border-none'}`}>
-                        {event.title}
+                        {event?.title}
                     </button>
                 ))}
             </div>
@@ -57,8 +60,8 @@ function IndividualEvent() {
                         <div className='h-full flex flex-row justify-between items-start '>
                             <div className='h-full flex flex-col justify-between'>
                                 <div className='flex flex-col'>
-                                    <h2 className='text-4xl font-[Tasa-SemiBold] mb-2 text-white'>{currentSubEvents[subEventIndex].title}</h2>
-                                    <p className="text-base font-[Tasa-Regular] leading-6 text-gray-300 text-left">{currentSubEvents[subEventIndex].description}</p>
+                                    <h2 className='text-4xl font-[Tasa-SemiBold] mb-2 text-white'>{currentSubEvents[subEventIndex]?.title}</h2>
+                                    <p className="text-base font-[Tasa-Regular] leading-6 text-gray-300 text-left">{currentSubEvents[subEventIndex]?.description}</p>
                                 </div>
                                 <div className='gap-5 mt-2 justify-between items-center flex'>
                                     <RegisterBtn />
@@ -66,7 +69,7 @@ function IndividualEvent() {
                                 </div>
                             </div>
 
-                            <img src={currentSubEvents[subEventIndex].src} alt={currentSubEvents[subEventIndex].title} className='h-[300px] rounded-xl p-8' />
+                            <img src={currentSubEvents[subEventIndex]?.src} alt={currentSubEvents[subEventIndex]?.title} className='h-[300px] rounded-xl p-8' />
 
                         </div>
                     </GradientBox>
