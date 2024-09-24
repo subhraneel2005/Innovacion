@@ -18,11 +18,9 @@ export default function Home() {
       {/* <NavbarMobile /> */}
       <HomePage />
       <Events />
-      {/* <IndividualEvent/> */}
-      {/* <Gallery /> */}
-      {/* <Gallery1 /> */}
-      {/* <MediaCoverage /> */}
-      {/* <Footer /> */}
+      {/* <IndividualEvent /> */}
+      <MediaCoverage />
+      <Footer />
     </div>
   );
 }
