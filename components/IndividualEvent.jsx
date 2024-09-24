@@ -1,50 +1,87 @@
 'use client'
 
-import {useState} from 'react'
-import GradientBox from './GradientBox'
-import StarryBackground from './StarryBackground/StarryBackground'
-import { Data } from './EventsData'
-import { FaLongArrowAltRight } from "react-icons/fa";
+import { useState } from 'react';
+import GradientBox from './GradientBox';
+import StarryBackground from './StarryBackground/StarryBackground';
+import { Data } from './EventsData';
+import { FaLongArrowAltRight } from "react-icons/fa"; // Importing the icon
+import RegisterBtn from './RegisterBtn';
 
 function IndividualEvent() {
+    const [selectedEventIndex, setSelectedEventIndex] = useState(0);
+    const [subEventIndex, setSubEventIndex] = useState(0);
 
-    const [selectedEvent, setSelectedEvent] = useState(Data[0]);
-
-    const changeEventHandler = (event) => {
-        setSelectedEvent(event);
+    const changeEventHandler = (index) => {
+        setSelectedEventIndex(index);
+        setSubEventIndex(0); // Reset sub-event index when changing main event
     }
 
-  return (
-    <div className="min-h-screen w-full flex flex-col justify-center items-center rounded-[40px] relative z-10 -top-[40px] border-2 border-[#16423C] lg:px-[108px] shadow-[0px_0px_20px_rgba(22,66,60,1)]" >
-         <StarryBackground extraClass={"z-10 top-0 left-0 right-0 bottom-0 rounded-[40px] bg-[radial-gradient(circle_at_bottom,#000_0%,#000_100%)]"} />
-            <ul className='w-[1000px] justify-evenly gap-6 flex items-center'>
-                {Data.map((e) => (
-                <li
-                 key={e.id}
-                 onMouseEnter={() => changeEventHandler(e)}
-                 onClick={() => changeEventHandler(e)}
-                 className='cursor-pointer text-gray-100 flex justify-center items-center px-4 py-2 text-2xl hover:border border-[#16423C] hover:rounded-[10px] transition duration-300'>
-                    {e.title}
-                </li>
-                ))}
-            </ul>
+    const currentEvent = Data[selectedEventIndex];
+    const currentSubEvents = currentEvent.subEvents;
 
-        <GradientBox>
-            <div className='w-[1000px] h-full flex items-center justify-center'>
-                <div className='flex flex-col justify-start items-start'>
-                    <h2 className='text-[3.2rem] font-[Tasa-SemiBold] mb-4 text-center text-white'>{selectedEvent.title}</h2>
-                    <p className="text-base font-[Tasa-Regular] leading-6 text-gray-300 text-left max-w-[582px]">{selectedEvent.description}</p>
-                    
-                    <div className='gap-5 mt-20 justify-between items-center flex'>
-                        <button className='px-4 py-2 rounded-[10px] bg-[#16423C] text-white flex justify-center items-center text-[16px]'>Register <FaLongArrowAltRight size={20}/></button>
-                        <button className='bg-[#6A9C89] px-4 py-2 rounded-[10px] text-white'>Download Rules</button>
+    const nextSubEvent = () => {
+        if (subEventIndex < currentSubEvents.length - 1) {
+            setSubEventIndex(subEventIndex + 1);
+        }
+    };
+
+    const prevSubEvent = () => {
+        if (subEventIndex > 0) {
+            setSubEventIndex(subEventIndex - 1);
+        }
+    };
+
+    return (
+        <div className="h-screen w-full flex flex-col items-center ">
+            <StarryBackground extraClass={"z-10 top-0 left-0 right-0 bottom-0 bg-[radial-gradient(circle_at_bottom,#000_0%,#000_100%)]"} />
+
+            <h1 className='text-4xl md:text-[3.2rem] font-[Tasa-SemiBold] text-white text-center md:py-[80px] relative z-20'>Register Now</h1>
+            {/* Tabs for Events */}
+            <div className="flex space-x-4 mb-6 relative z-20">
+                {Data.map((event, index) => (
+                    <button
+                        key={event.id}
+                        onClick={() => changeEventHandler(index)}
+                        className={`px-4 py-2 rounded ${selectedEventIndex === index ? 'border-[1px] border-[#16423c] shadow-[0px_0px_20px_rgba(22,66,60,1)]' : 'border-none'}`}>
+                        {event.title}
+                    </button>
+                ))}
+            </div>
+
+            {/* Slider for Sub-Events */}
+            <div className="flex justify-center items-center w-full relative z-20">
+                <button onClick={prevSubEvent} disabled={subEventIndex === 0} className="px-4 py-2 rounded border-[1px] border-[#16423c] shadow-[0px_0px_20px_rgba(22,66,60,1)]">Previous</button>
+
+                <div className="flex flex-col overflow-hidden h-full w-1/2 mx-2">
+                    <GradientBox extraClass="w-full m-0">
+                        <div className='h-full flex flex-row justify-between items-start '>
+                            <div className='h-full flex flex-col justify-between'>
+                                <div className='flex flex-col'>
+                                    <h2 className='text-4xl font-[Tasa-SemiBold] mb-2 text-white'>{currentSubEvents[subEventIndex].title}</h2>
+                                    <p className="text-base font-[Tasa-Regular] leading-6 text-gray-300 text-left">{currentSubEvents[subEventIndex].description}</p>
+                                </div>
+                                <div className='gap-5 mt-2 justify-between items-center flex'>
+                                    <RegisterBtn />
+                                    <button className='h-[50px] md:h-[52px] z-10 font-[Tasa-SemiBold] rounded-xl text-white bg-[#6A9C89] hover:bg-[#032221] px-4'>Download Rules</button>
+                                </div>
+                            </div>
+
+                            <img src={currentSubEvents[subEventIndex].src} alt={currentSubEvents[subEventIndex].title} className='h-[300px] rounded-xl p-8' />
+
+                        </div>
+                    </GradientBox>
+                    {/* Dotted Indicator */}
+                    <div className="flex justify-center pt-4">
+                        {currentSubEvents.map((_, index) => (
+                            <div key={index} className={`w-2 h-2 rounded-full mx-1 ${subEventIndex === index ? 'bg-white' : 'bg-gray-400'}`} />
+                        ))}
                     </div>
                 </div>
-                <img src={selectedEvent.src} alt={selectedEvent.title} className='w-[330px] h-[330px] rounded-[10px]' />
+
+                <button onClick={nextSubEvent} disabled={subEventIndex === currentSubEvents.length - 1} className="px-4 py-2 rounded border-[1px] border-[#16423c] shadow-[0px_0px_20px_rgba(22,66,60,1)]">Next</button>
             </div>
-        </GradientBox>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default IndividualEvent
