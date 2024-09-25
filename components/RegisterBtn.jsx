@@ -3,7 +3,7 @@ import './RegisterBtn.css'
 
 const RegisterBtn = () => {
     return (
-        <button className='h-[52px] font-[Tasa-SemiBold] text-white bg-[#16423c] lg:px-4'>
+        <button className='h-[50px] md:h-[52px] z-10 font-[Tasa-SemiBold] rounded-xl text-white bg-[#16423c] hover:bg-[#032221] px-4'>
             <span>Register Now!</span>
             <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
 

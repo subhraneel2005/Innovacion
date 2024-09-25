@@ -3,18 +3,19 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 
-export const Card = React.memo(
-  ({
-    card,
-    index,
-    hovered,
-    setHovered,
-  }) => (
+// Card component
+export const Card = React.memo(({ card, index, hovered, setHovered, onCardClick }) => {
+  const handleCardClick = () => {
+    onCardClick(card); // Pass the card details to the handler
+  };
+
+  return (
     <div
       onMouseEnter={() => setHovered(index)}
       onMouseLeave={() => setHovered(null)}
+      onClick={handleCardClick} // Trigger card click handler
       className={cn(
-        "rounded-lg relative dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out",
+        "cursor-pointer rounded-lg relative dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out",
         hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
       )}
     >
@@ -36,24 +37,25 @@ export const Card = React.memo(
         </div>
       </div>
     </div>
-  )
-);
+  );
+});
 
 Card.displayName = "Card";
 
-export function FocusCards({ cards }) {
+// FocusCards component
+export function FocusCards({ cards, onCardClick }) {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl w-full">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl w-full">
       {cards.map((card, index) => (
-        <Card
-          key={card.title}
-          card={card}
-          index={index}
-          hovered={hovered}
-          setHovered={setHovered}
-
+        <Card 
+          key={card.title} 
+          card={card} 
+          index={index} 
+          hovered={hovered} 
+          setHovered={setHovered} 
+          onCardClick={onCardClick} // Pass the card click handler
         />
       ))}
     </div>
