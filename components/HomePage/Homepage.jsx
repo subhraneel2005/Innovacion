@@ -3,7 +3,7 @@ import React from 'react'
 import RegisterBtn from '../RegisterBtn'
 import StarryBackground from '../StarryBackground/StarryBackground'
 
-function HomepageLarge() {
+function Homepage() {
   return (
     <div id='homepage' className="h-screen w-full relative flex justify-center items-center flex-col">
       <StarryBackground extraClass="bg-[radial-gradient(circle_at_bottom,#16423C_0%,#000_100%)]" />
@@ -16,4 +16,4 @@ function HomepageLarge() {
   )
 }
 
-export default HomepageLarge
+export default Homepage
