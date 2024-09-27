@@ -3,29 +3,70 @@ import Marquee from "@/components/magicui/marquee";
 
 const reviews = [
   {
-    name: "Jack",
-    img: "https://avatar.vercel.sh/jack",
+    name: "1",
+    img: "/Partners/1.webp",
   },
   {
-    name: "Jill",
-    img: "https://avatar.vercel.sh/jill",
+    name: "2",
+    img: "/Partners/2.webp",
   },
   {
-    name: "John",
-    img: "https://avatar.vercel.sh/john",
+    name: "3",
+    img: "/Partners/3.webp",
   },
   {
-    name: "Jane",
-    img: "https://avatar.vercel.sh/jane",
+    name: "4",
+    img: "/Partners/4.webp",
   },
   {
-    name: "Jenny",
-    img: "https://avatar.vercel.sh/jenny",
+    name: "5",
+    img: "/Partners/5.webp",
   },
   {
-    name: "James",
-    img: "https://avatar.vercel.sh/james",
+    name: "6",
+    img: "/Partners/6.webp",
   },
+  {
+    name: "7",
+    img: "/Partners/7.webp",
+  },
+  {
+    name: "8",
+    img: "/Partners/8.webp",
+  },
+  {
+    name: "9",
+    img: "/Partners/9.webp",
+  },
+  {
+    name: "10",
+    img: "/Partners/10.webp",
+  },
+  {
+    name: "11",
+    img: "/Partners/11.webp",
+  },
+  {
+    name: "12",
+    img: "/Partners/12.webp",
+  },
+  {
+    name: "13",
+    img: "/Partners/13.webp",
+  },
+  {
+    name: "14",
+    img: "/Partners/14.webp",
+  },
+  {
+    name: "15",
+    img: "/Partners/15.webp",
+  },
+  {
+    name: "16",
+    img: "/Partners/16.webp",
+  },
+
 ];
 
 const firstRow = reviews.slice(0, reviews.length / 2);
