@@ -1,10 +1,17 @@
 'use client'
-
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import RegisterBtn from '../RegisterBtn';
 
 function NewAppNavCodepen() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router=useRouter();
+  const goToEvent=()=>{
+    router.push('/events');
+  }
+  const goToHome=()=>{
+    router.push('/');
+  }
 
   // Scroll function to handle smooth scrolling
   const handleScroll = (sectionId) => {
@@ -32,8 +39,8 @@ function NewAppNavCodepen() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center justify-center flex-1 space-x-5 lg:space-x-8 text-white font-[Tasa-SemiBold]">
-          <span onClick={() => handleScroll('homepage')} className='cursor-pointer'>Home</span>
-          <span onClick={() => handleScroll('events')} className='cursor-pointer'>Events</span>
+          <span onClick={() => goToHome()} className='cursor-pointer'>Home</span>
+          <span onClick={() => goToEvent()} className='cursor-pointer'>Events</span>
           <span onClick={() => handleScroll('gallery')} className='cursor-pointer'>Gallery</span>
           <span onClick={() => handleScroll('partners')} className='cursor-pointer'>Partners</span>
           <span onClick={() => handleScroll('contact')} className='cursor-pointer'>Contact</span>
