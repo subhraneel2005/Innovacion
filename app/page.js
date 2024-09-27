@@ -1,11 +1,9 @@
 import Events from "@/components/Events";
-import Gallery from "@/components/Gallery/Gallery";
 import MediaCoverage from "@/components/MediaCoverage/MediaCoverage";
 import Footer from "@/components/Footer";
 import HomePage from "@/components/HomePage/Homepage";
 import NewAppNavCodepen from "@/components/HomePage/NewAppNavCodepen";
-
-
+import Gallery from "@/components/Gallery/Gallery";
 export default function Home() {
 
 
@@ -14,6 +12,7 @@ export default function Home() {
       <NewAppNavCodepen />
       <HomePage />
       <Events />
+      <Gallery/>
       <MediaCoverage />
       <Footer />
     </div>
