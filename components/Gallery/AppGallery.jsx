@@ -101,7 +101,7 @@ const AppGallery = () => {
         {...handlersTop}
         className="relative z-20 h-[40%] w-full overflow-hidden mx-auto px-10"
       >
-        <h1 className='text-4xl md:text-[3.2rem] font-[Tasa-SemiBold] mt-2 mb-6 text-white text-center'>Gallery Top</h1>
+        <h1 className='text-4xl md:text-[3.2rem] font-[Tasa-SemiBold] mt-2 mb-6 text-white text-center'>Gallery</h1>
         <div
           className="w-full gap-3 flex transition-transform duration-500 ease-in-out rounded-xl"
           style={{ transform: `translateX(-${currentIndexTop * 100}%)` }}
@@ -123,7 +123,6 @@ const AppGallery = () => {
         {...handlersBottom}
         className="relative z-20 h-[40%] w-full overflow-hidden mx-auto px-10 mt-10"
       >
-        <h1 className='text-4xl md:text-[3.2rem] font-[Tasa-SemiBold] mt-2 mb-6 text-white text-center'>Gallery Bottom</h1>
         <div
           className="w-full flex transition-transform duration-500 ease-in-out rounded-xl"
           style={{ transform: `translateX(-${currentIndexBottom * 100}%)` }}

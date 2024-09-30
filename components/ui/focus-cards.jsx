@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
+import RegisterBtn from "../RegisterBtn";
 
 // Card component
 export const Card = React.memo(({ card, index, hovered, setHovered, onCardClick }) => {
@@ -13,7 +14,6 @@ export const Card = React.memo(({ card, index, hovered, setHovered, onCardClick 
     <div
       onMouseEnter={() => setHovered(index)}
       onMouseLeave={() => setHovered(null)}
-      onClick={handleCardClick} // Trigger card click handler
       className={cn(
         "cursor-pointer rounded-lg relative dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out",
         hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
@@ -32,8 +32,8 @@ export const Card = React.memo(({ card, index, hovered, setHovered, onCardClick 
         )}
       >
         <div className="text-xl md:text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200">
-          <p className="text-gray-200 text-3xl">{card.title}</p>
-          <p className="text-gray-400 text-[17px]">Rs {card.price}</p>
+          <p className="text-gray-200 mb-3 text-2xl md:text-4xl">{card.title}</p>
+          <RegisterBtn text="Explore" onClick={handleCardClick}/>
         </div>
       </div>
     </div>

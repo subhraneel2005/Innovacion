@@ -11,7 +11,7 @@ function Homepage() {
         <h1 className="text-4xl md:text-7xl text-white font-[Quantum] px-6">INNOVACIÓN</h1>
         <h1 className="text-4xl md:text-7xl text-white font-[Quantum] px-6">2025</h1>
       </div>
-      <RegisterBtn />
+      <RegisterBtn text="Coming Soon"/>
     </div>
   )
 }
