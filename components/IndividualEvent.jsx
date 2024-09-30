@@ -69,7 +69,7 @@ function IndividualEvent() {
                                 <img src={currentSubEvents[subEventIndex]?.src} alt={currentSubEvents[subEventIndex]?.title} className='md:hidden w-full md:h-[300px] rounded-xl my-4 md:p-8' />
 
                                 <div className='w-full gap-5 mt-2 justify-between items-center flex '>
-                                    <RegisterBtn extraClass="text-xs md:text-base" />
+                                    <RegisterBtn text="Explore" extraClass="text-xs md:text-base" />
                                     <button className='text-xs md:text-base h-[50px] md:h-[52px] z-10 font-[Tasa-SemiBold] rounded-xl text-white bg-[#6A9C89] hover:bg-[#032221] px-4'>Download Rules</button>
                                 </div>
                             </div>
