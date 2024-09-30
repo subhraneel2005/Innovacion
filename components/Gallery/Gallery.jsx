@@ -4,10 +4,10 @@ import WebGallery from './WebGallery'
 
 function Gallery() {
   return (
-    <>
+    <div id='gallery'>
       <AppGallery/>
       <WebGallery/>
-    </>
+    </div>
   )
 }
 

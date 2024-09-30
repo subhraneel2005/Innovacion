@@ -19,7 +19,7 @@ function MediaCoverage() {
   }, []);
 
   return (
-    <div id='partners' className="min-h-screen w-full rounded-[40px] relative z-20 -top-[120px] border-t-2 border-[#16423C] shadow-[0px_0px_20px_rgba(22,66,60,1)]">
+    <div id='insights' className="min-h-screen w-full rounded-[40px] relative z-20 -top-[120px] border-t-2 border-[#16423C] shadow-[0px_0px_20px_rgba(22,66,60,1)]">
       <StarryBackground extraClass={"z-10 top-0 left-0 right-0 bottom-0 rounded-[40px] bg-[radial-gradient(circle_at_bottom,#000_0%,#000_100%)]"} />
 
       <div className='relative z-20 m-8 md:mx-[164px] my-[80px] md:my-[100px] flex justify-center items-center flex-col'>
@@ -32,12 +32,6 @@ function MediaCoverage() {
             <DesktopMedia key={index} index={index} /> // Render desktop version
           )
         ))}
-      </div>
-
-
-      <div className="w-full flex flex-col items-center justify-center relative z-20">
-        <h2 className="text-4xl md:text-[3.2rem] text-gray-100 font-[Tasa-SemiBold] mb-4">Partners</h2>
-        <MarqueeDemo />
       </div>
     </div>
   );

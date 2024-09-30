@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import HomePage from "@/components/HomePage/Homepage";
 import NewAppNavCodepen from "@/components/HomePage/NewAppNavCodepen";
 import Gallery from "@/components/Gallery/Gallery";
+import PartnersSlide from "@/components/PartnersSlide";
 export default function Home() {
 
 
@@ -14,6 +15,7 @@ export default function Home() {
       <Events />
       <Gallery/>
       <MediaCoverage />
+      <PartnersSlide/>
       <Footer />
     </div>
   );

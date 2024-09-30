@@ -16,7 +16,23 @@ const images = [
   "/Gallery/10.webp",
   "/Gallery/11.webp",
   "/Gallery/12.webp",
+  "/Gallery/13.webp",
+  "/Gallery/14.webp",
+  "/Gallery/15.webp",
+  "/Gallery/16.webp",
+  "/Gallery/17.webp",
+  "/Gallery/18.webp",
+  "/Gallery/19.webp",
+  "/Gallery/20.webp",
+  "/Gallery/21.webp",
+  "/Gallery/22.webp",
+  "/Gallery/23.webp",
+  "/Gallery/24.webp",
+  "/Gallery/25.webp",
+  "/Gallery/26.webp",
+  "/Gallery/27.webp",
 ];
+
 
 const WebGallery = () => {
   const [currentIndexTop, setCurrentIndexTop] = useState(0);
@@ -77,7 +93,7 @@ const WebGallery = () => {
       >
         <h1 className='text-4xl md:text-[3.2rem] font-[Tasa-SemiBold] mt-2 mb-6 text-white text-center'>Gallery Top</h1>
         <div
-          className="w-full flex transition-transform duration-500 ease-in-out"
+          className="w-full gap-3 flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndexTop * 25}%)` }} // Show 4 images at once
         >
           {images.map((image, index) => (
