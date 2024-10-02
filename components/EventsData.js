@@ -151,21 +151,21 @@ export const Data = [
           title: "AD-Mania",
           description:
             "A stellar marketing campaign. Witness the minds of brilliant marketers showcase their innovative campaigns, each a testament to their creative thinking and strategic planning in the vast expanse of the digital universe.",
-          src: "/Events/Management.webp",
+          src: "/Events/ad-mania.jpg",
         },
         {
           id: 2,
           title: "Eureka",
           description:
             "A cosmic journey of entrepreneurship. Witness the minds of brilliant innovators launch their ventures, each a reflection of their entrepreneurial spirit and innovative thinking.",
-          src: "/Events/eureka.webp",
+          src: "/Events/eureka.jpg",
         },
         {
           id: 3,
           title: "The Bull Master",
           description:
             "A financial market conquest. Witness the minds of brilliant investors navigate the stock market, each a reflection of their financial acumen and strategic thinking.",
-          src: "/Events/bullmaster.webp",
+          src: "/Events/bullmaster.jpg",
         },
       ],
     },
@@ -178,21 +178,21 @@ export const Data = [
           title: "Mathemagic",
           description:
             "A mathematical odyssey. Witness the minds of brilliant mathematicians solve complex problems, each a reflection of their logical thinking and mathematical prowess.",
-          src: "/Events/others.webp",
+          src: "/Events/MATH.jpg",
         },
         {
           id: 2,
           title: "Quiz-Crusade",
           description:
             "A battle of wits and knowledge. Witness the minds of brilliant quiz enthusiasts compete for supremacy, each a reflection of their intellectual prowess and general knowledge.",
-          src: "/Events/quizcrusade.webp",
+          src: "/Events/QUIZ.png",
         },
         {
           id: 3,
           title: "IIISO",
           description:
             " A scientific olympiad. Witness the minds of brilliant scientists compete for academic excellence, each a reflection of their analytical, logical, and critical thinking skills.",
-          src: "/Events/iiiso.webp",
+          src: "/Events/IIISO.jpg",
         },
       ],
     },
