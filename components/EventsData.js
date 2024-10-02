@@ -76,7 +76,7 @@ export const Data = [
           title: "360CodeCraft",
           description:
             "A cosmic hackathon adventure. Witness the birth of innovative software and web applications as developers from all levels showcase their coding prowess, each a testament to their creativity and technical brilliance.",
-          src: "/Events/hackathon.webp",
+          src: "/Events/360CodeCraft.jpg",
         },
         {
           id: 2,
@@ -90,28 +90,28 @@ export const Data = [
           title: "Hack-AI",
           description:
             "A cosmic AI frontier. Witness the birth of groundbreaking generative AI applications as developers showcase their creativity and technical skills, each a testament to their innovative thinking and AI mastery.",
-          src: "/Events/hackai.webp",
+          src: "/Events/hackai.jpg",
         },
         {
           id: 4,
           title: "Codebreak Odyssey",
           description:
             "A galactic coding quest. Witness the minds of brilliant coders unravel complex puzzles, each a testament to their problem-solving skills and logical thinking.",
-          src: "/Events/codebreakodyssey.webp",
+          src: "/Events/codebreak.jpg",
         },
         {
           id: 5,
           title: "Cyberthon",
           description:
             "A digital fortress challenge. Witness the minds of brilliant cybersecurity experts defend against cyber threats, each a testament to their technical prowess and strategic acumen.",
-          src: "/Events/cyberthon.webp",
+          src: "/Events/cyberthon.jpeg",
         },
         {
           id: 6,
           title: "Codesphere",
           description:
             " A digital coding battleground. Witness the minds of brilliant developers compete for coding supremacy, each a testament to their technical prowess and algorithmic thinking.",
-          src: "/Events/codesphere.webp",
+          src: "/Events/codesphere.jpg",
         },
       ],
     },
@@ -124,21 +124,21 @@ export const Data = [
           title: "BGMI Championship",
           description:
             "A battle royale of gaming titans. Witness the skills of elite BGMI players as they compete for victory, each a testament to their tactical prowess and gaming mastery.",
-          src: "/Events/gaming.webp",
+          src: "/Events/BGMI.jpg",
         },
         {
           id: 2,
           title: "Valiants",
           description:
             "A tactical showdown of Valorant champions. Witness the skills of elite Valorant players as they compete for victory, each a testament to their strategic thinking and gaming mastery.",
-          src: "/Events/valiants.webp",
+          src: "/Events/VALIANTS.jpg",
         },
         {
           id: 3,
           title: "FIFA",
           description:
             "A virtual football showdown. Witness the skills of elite FIFA players as they compete for victory on the digital pitch, each a testament to their gaming prowess and tactical acumen.",
-          src: "/Events/fifa.webp",
+          src: "/Events/FIFA.webp",
         },
       ],
     },
