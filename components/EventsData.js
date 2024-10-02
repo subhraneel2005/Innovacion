@@ -8,21 +8,21 @@ export const Data = [
           title: "Tracker",
           description:
             "Navigate the cosmic course. Robots race, guided by sensors, on a winding line track. Precision and speed reign supreme in this galactic challenge.",
-          src: "/Events/robotics.webp",
+          src: "/Events/Tracker.jpg",
         },
         {
           id: 2,
           title: "X-Race",
           description:
             "A cosmic duel of robotic speed. Watch as machines race across the galactic track, their every move a testament to engineering brilliance.",
-          src: "/Events/xrace.webp",
+          src: "/Events/X-Race.webp",
         },
         {
           id: 3,
           title: "Robofooties",
           description:
             "A cosmic soccer spectacle. Watch as robotic teams clash on the galactic pitch, their every goal a masterpiece of engineering and strategy.",
-          src: "/Events/robofooties.webp",
+          src: "/Events/Robofooties.webp",
         },
         {
           id: 4,
@@ -42,28 +42,28 @@ export const Data = [
           title: "Innovare",
           description:
             "A cosmic showcase of innovation. Witness the fruits of imagination as inventors unveil their intricate models, each a testament to creativity and engineering prowess.",
-          src: "/Events/exhibition.webp",
+          src: "/Events/innovare.jpg",
         },
         {
           id: 2,
           title: "Science Model Exhibition",
           description:
             "A cosmic showcase of young inventors. Witness the future of science as kids unveil their mind-blowing models, each a masterpiece of curiosity and engineering wizardry.",
-          src: "/Events/sciencemodel.webp",
+          src: "/Events/sciencemodel.jpg",
         },
         {
           id: 3,
           title: "Electroslides",
           description:
             "A cosmic showcase of engineering innovation. Witness the future of technology as researchers from all fields unveil their groundbreaking ideas, each a testament to their brilliance and scientific discovery.",
-          src: "/Events/electroslides.webp",
+          src: "/Events/electroslides.jpg",
         },
         {
           id: 4,
           title: "Aperture",
           description:
             "A cosmic voyage through the lens. Witness the magic of storytelling as photographers unveil their captivating images, each a testament to their creativity and artistic vision.",
-          src: "/Events/aperture.webp",
+          src: "/Events/aperture.jpg",
         },
       ],
     },
