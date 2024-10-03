@@ -33,10 +33,8 @@ const images = [
   "/Gallery/27.webp",
 ];
 
-
 const WebGallery = () => {
   const [currentIndexTop, setCurrentIndexTop] = useState(0);
-  const [currentIndexBottom, setCurrentIndexBottom] = useState(images.length - 1);
 
   const handlersTop = useSwipeable({
     onSwipedLeft: () => handleNextTop(),
@@ -45,22 +43,13 @@ const WebGallery = () => {
     trackMouse: true,
   });
 
-  const handlersBottom = useSwipeable({
-    onSwipedLeft: () => handleNextBottom(),
-    onSwipedRight: () => handlePrevBottom(),
-    preventDefaultTouchmoveEvent: true,
-    trackMouse: true,
-  });
-
   useEffect(() => {
     const intervalTop = setInterval(handleNextTop, 2000);
-    const intervalBottom = setInterval(handleNextBottom, 2000);
     
     return () => {
       clearInterval(intervalTop);
-      clearInterval(intervalBottom);
     };
-  }, [currentIndexTop, currentIndexBottom]);
+  }, [currentIndexTop]);
 
   const handleNextTop = () => {
     setCurrentIndexTop((prevIndex) => (prevIndex + 1) % images.length);
@@ -72,16 +61,6 @@ const WebGallery = () => {
     );
   };
 
-  const handleNextBottom = () => {
-    setCurrentIndexBottom((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  const handlePrevBottom = () => {
-    setCurrentIndexBottom((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
-
   return (
     <div className='h-screen w-full relative md:flex md:flex-col hidden'>
       <StarryBackground extraClass={"z-10 -top-[72px] left-0 right-0 bottom-0 bg-[radial-gradient(circle_at_bottom,#000_0%,#000_100%)]"} />
@@ -89,33 +68,13 @@ const WebGallery = () => {
       {/* Top Slider */}
       <div
         {...handlersTop}
-        className="relative z-20 h-[40%] w-full overflow-hidden mx-auto px-2 md:px-10"
+        className="relative z-20 h-[60%] w-full overflow-hidden mx-auto px-2 md:px-10"
       >
-        <h1 className='text-4xl md:text-[3.2rem] font-[Tasa-SemiBold] mt-2 mb-6 text-white text-center'>Gallery</h1>
+        <h1 className='text-4xl md:text-[3.2rem] font-[Tasa-SemiBold] mt-10 mb-10 text-white text-center'>Gallery</h1>
+        {/* Increased margin-bottom to mb-10 for more gap */}
         <div
-          className="w-full gap-3 flex transition-transform duration-500 ease-in-out"
+          className="w-full gap-3 flex transition-transform duration-500 ease-in-out mt-28"
           style={{ transform: `translateX(-${currentIndexTop * 25}%)` }} // Show 4 images at once
-        >
-          {images.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`Slide ${index + 1}`}
-              loading='lazy'
-              className="w-1/4 h-auto object-cover rounded-xl border-2 border-[#16423C] shadow-[0px_0px_20px_rgba(22,66,60,1)]"
-            />
-          ))}
-        </div>
-      </div>
-
-    
-      <div
-        {...handlersBottom}
-        className="relative z-20 h-[40%] w-full overflow-hidden mx-auto px-2 md:px-10 mt-10"
-      >
-        <div
-          className="w-full flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentIndexBottom * 25}%)` }} // Show 4 images at once
         >
           {images.map((image, index) => (
             <img

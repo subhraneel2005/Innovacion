@@ -99,33 +99,12 @@ const AppGallery = () => {
       {/* Top Slider (Right to Left) */}
       <div
         {...handlersTop}
-        className="relative z-20 h-[40%] w-full overflow-hidden mx-auto px-10"
+        className="relative z-20 h-[60%] w-full overflow-hidden mx-auto px-10"
       >
-        <h1 className='text-4xl md:text-[3.2rem] font-[Tasa-SemiBold] mt-2 mb-6 text-white text-center'>Gallery</h1>
+        <h1 className='text-4xl md:text-[3.2rem] font-[Tasa-SemiBold] mt-16 mb-6 text-white text-center'>Gallery</h1>
         <div
-          className="w-full gap-3 flex transition-transform duration-500 ease-in-out rounded-xl"
-          style={{ transform: `translateX(-${currentIndexTop * 100}%)` }}
-        >
-          {images.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`Slide ${index + 1}`}
-              loading='lazy'
-              className="w-full mx-2 object-cover rounded-xl border-2 border-[#16423C] shadow-[0px_0px_20px_rgba(22,66,60,1)]"
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* Bottom Slider (Right to Left, Start from Last Image) */}
-      <div
-        {...handlersBottom}
-        className="relative z-20 h-[40%] w-full overflow-hidden mx-auto px-10 mt-10"
-      >
-        <div
-          className="w-full flex transition-transform duration-500 ease-in-out rounded-xl"
-          style={{ transform: `translateX(-${currentIndexBottom * 100}%)` }}
+          className="w-full gap-3 flex transition-transform duration-500 ease-in-out rounded-xl mt-32"
+          style={{ transform: `translateX(-${currentIndexTop * 100}%)`}}
         >
           {images.map((image, index) => (
             <img
