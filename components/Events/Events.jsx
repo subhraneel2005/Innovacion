@@ -1,7 +1,7 @@
 import React from 'react';
-import StarryBackground from './StarryBackground/StarryBackground';
-import { FocusCardsDemo } from './FocusCardsDemo';
-import GradientBox from './GradientBox';
+import StarryBackground from '../StarryBackground/StarryBackground';
+import { FocusCardsDemo } from '../FocusCardsDemo';
+import GradientBox from '../GradientBox';
 
 function Events() {
   return (
