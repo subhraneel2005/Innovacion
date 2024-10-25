@@ -3,8 +3,8 @@ import './RegisterBtn.css'
 
 const RegisterBtn = ({ extraClass, text, onClick }) => {
     return (
-        <button 
-            className={`h-[30px] md:h-[52px] z-10 font-[Tasa-SemiBold] rounded-xl text-white bg-[#16423c] hover:bg-[#032221] px-4 ${extraClass}`}
+        <button
+            className={`z-10 font-[Megatrans] rounded-xl text-white bg-[#16423c] hover:bg-[#032221] px-4 ${extraClass}`}
             onClick={onClick ? onClick : undefined} // Optional onClick handler
         >
             <span>{text}</span>
