@@ -1,27 +1,12 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import StarryBackground from '../StarryBackground/StarryBackground';
-import { MarqueeDemo } from "../Partners";
-import MobileMedia from './MobileMedia';
-import DesktopMedia from './DesktopMedia';
 import GradientBox from '../GradientBox';
 import RegisterBtn from '../RegisterBtn';
 
 function MediaCoverage() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
-    <div id='insights' className="min-h-screen w-full rounded-[40px] relative z-20 -top-[120px] border-y-2 border-[#16423C] shadow-[0px_0px_40px_rgba(22,66,60,1)]">
+    <div id='insights' className="min-h-screen w-full rounded-[40px] relative z-20 -top-[120px] border-y-2 border-[#16423C] shadow-[0px_0px_20px_rgba(22,66,60,1)]">
       <StarryBackground extraClass={"z-10 top-0 left-0 right-0 bottom-0 rounded-[40px] bg-[radial-gradient(circle_at_bottom,#000_0%,#000_100%)]"} />
 
       <div className='relative z-20 m-8 md:mx-[164px] my-[80px] md:my-[100px] flex justify-center items-center flex-col'>
