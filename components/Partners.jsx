@@ -69,9 +69,6 @@ const reviews = [
 
 ];
 
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
-
 const ReviewCard = ({ img, name }) => {
   return (
     <figure
@@ -81,7 +78,7 @@ const ReviewCard = ({ img, name }) => {
     >
       <div className="flex flex-col items-center justify-center ">
         <img src={img} alt={name} className="w-32 h-32 md:w-40 md:h-40" />
-        
+
       </div>
     </figure>
   );
@@ -89,14 +86,16 @@ const ReviewCard = ({ img, name }) => {
 
 export function MarqueeDemo() {
   return (
-    <div className="relative flex min-h-[700px] -mt-[70px] md:-mt-[10px] w-full flex-col items-center justify-center overflow-hidden bg-transparent">
-      <Marquee pauseOnHover className="bg-transparent [--duration:20s] mb-4">
-        {firstRow.map((review) => (
+    <div className="relative flex min-h-[900px] w-full flex-col items-center justify-center overflow-hidden bg-transparent z-20">
+      <h1 className="z-20 text-3xl md:text-[2.5rem] font-[Ethnocentric] text-white text-center ">Present Partners</h1>
+      <Marquee pauseOnHover className="bg-transparent [--duration:50s] mt-6 mb-20">
+        {reviews.map((review) => (
           <ReviewCard key={review.name} {...review} />
         ))}
       </Marquee>
-      <Marquee reverse pauseOnHover className="bg-transparent [--duration:20s]">
-        {secondRow.map((review) => (
+      <h1 className="z-20 text-3xl md:text-[2.5rem] font-[Ethnocentric] text-white text-center ">Previous Partners</h1>
+      <Marquee pauseOnHover className="bg-transparent [--duration:50s] mt-6 mb-4">
+        {reviews.map((review) => (
           <ReviewCard key={review.name} {...review} />
         ))}
       </Marquee>
