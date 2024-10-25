@@ -4,20 +4,17 @@
 
 @layer base {
   @font-face {
-    font-family: Quantum;
-    src: url("./fonts/quantum.otf");
+    font-family: Ethnocentric;
+    src: url("./fonts/Ethnocentric.otf");
   }
   @font-face {
-    font-family: Tasa-SemiBold;
-    src: url("./fonts/TASAOrbiterText-SemiBold.otf");
-  }
-  @font-face {
-    font-family: Tasa-Regular;
-    src: url("./fonts/TASAOrbiterDeck-Regular.otf");
+    font-family: Megatrans;
+    src: url("./fonts/Megatrans.otf");
   }
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 

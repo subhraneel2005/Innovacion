@@ -1,0 +1,23 @@
+button {
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: white;
+}
+
+button > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover svg {
+  transform: translateX(5px);
+}
+
+button:active {
+  transform: scale(0.95);
+}
