@@ -1,11 +1,10 @@
 'use client'
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useRouter } from 'next/navigation'; // For Next.js
 import RegisterBtn from '../RegisterBtn';
 
 function DesktopNavbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter(); // Using Next.js router
 
   // Scroll function to handle smooth scrolling
@@ -13,7 +12,6 @@ function DesktopNavbar() {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setIsMenuOpen(false); // Close the menu on link click
     }
   };
 
@@ -26,7 +24,6 @@ function DesktopNavbar() {
       handleScroll(sectionId); // Direct scroll if already on the correct route
     }
   };
-
 
   return (
     <div className="flex justify-between items-center px-4 py-2 md:px-8 md:py-2 h-14 md:h-[4.5rem] w-max-full fixed top-0 left-0 right-0 bg-opacity-70 backdrop-blur-xl border-[#16423c] border-[1px] rounded-[10px] z-40 mx-[52px] my-3 md:mx-40 md:my-5">
