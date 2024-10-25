@@ -15,9 +15,18 @@
     font-family: Tasa-Regular;
     src: url("./fonts/TASAOrbiterDeck-Regular.otf");
   }
+  @font-face {
+    font-family: Ethnocentric;
+    src: url("./fonts/Ethnocentric.otf");
+  }
+  @font-face {
+    font-family: Megatrans;
+    src: url("./fonts/Megatrans.otf");
+  }
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
