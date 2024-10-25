@@ -23,17 +23,17 @@ export const Card = React.memo(({ card, index, hovered, setHovered, onCardClick 
         src={card.src}
         alt={card.title}
         fill
-        className="object-cover absolute inset-0 border-2 border-[#16423C] rounded-[10px]"
+        className="object-cover absolute inset-0 border-[1px] border-[#16423C] rounded-[10px]"
       />
       <div
         className={cn(
-          "absolute inset-0 bg-black/50 flex items-end py-8 px-4 transition-opacity duration-300",
+          "absolute inset-0 bg-black/50 flex items-end py-4 px-4 transition-opacity duration-300",
           hovered === index ? "opacity-100" : "opacity-0"
         )}
       >
         <div className="text-xl md:text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200">
-          <p className="text-gray-200 mb-3 text-2xl md:text-4xl">{card.title}</p>
-          <RegisterBtn text="Explore" onClick={handleCardClick}/>
+          <p className="text-gray-200 mb-3 text-xl md:text-2xl font-[Ethnocentric]">{card.title}</p>
+          <RegisterBtn text="Explore" onClick={handleCardClick} extraClass="h-[40px]" />
         </div>
       </div>
     </div>
@@ -49,12 +49,12 @@ export function FocusCards({ cards, onCardClick }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl w-full">
       {cards.map((card, index) => (
-        <Card 
-          key={card.title} 
-          card={card} 
-          index={index} 
-          hovered={hovered} 
-          setHovered={setHovered} 
+        <Card
+          key={card.title}
+          card={card}
+          index={index}
+          hovered={hovered}
+          setHovered={setHovered}
           onCardClick={onCardClick} // Pass the card click handler
         />
       ))}
