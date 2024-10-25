@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation'; // For Next.js
-import RegisterBtn from '../RegisterBtn';
+import RegisterBtn from '../ui/RegisterBtn';
 
 function DesktopNavbar() {
   const router = useRouter(); // Using Next.js router

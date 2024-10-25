@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation'; // For Next.js
-import RegisterBtn from '../RegisterBtn';
+import RegisterBtn from '../ui/RegisterBtn';
 
 function MobileNavbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
