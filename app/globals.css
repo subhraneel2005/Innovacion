@@ -4,18 +4,6 @@
 
 @layer base {
   @font-face {
-    font-family: Quantum;
-    src: url("./fonts/quantum.otf");
-  }
-  @font-face {
-    font-family: Tasa-SemiBold;
-    src: url("./fonts/TASAOrbiterText-SemiBold.otf");
-  }
-  @font-face {
-    font-family: Tasa-Regular;
-    src: url("./fonts/TASAOrbiterDeck-Regular.otf");
-  }
-  @font-face {
     font-family: Ethnocentric;
     src: url("./fonts/Ethnocentric.otf");
   }
