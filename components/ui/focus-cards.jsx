@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
-import RegisterBtn from "../RegisterBtn";
+import RegisterBtn from "./RegisterBtn";
 
 // Card component
 export const Card = React.memo(({ card, index, hovered, setHovered, onCardClick }) => {
