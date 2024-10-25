@@ -1,8 +1,8 @@
 "use client"
 import React from 'react';
 import StarryBackground from '../StarryBackground/StarryBackground';
-import GradientBox from '../GradientBox';
-import RegisterBtn from '../RegisterBtn';
+import GradientBox from '../ui/GradientBox';
+import RegisterBtn from '../ui/RegisterBtn';
 
 function MediaCoverage() {
   return (
