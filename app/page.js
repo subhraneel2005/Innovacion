@@ -1,14 +1,15 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import Events from "@/components/Events";
-import MediaCoverage from "@/components/MediaCoverage/MediaCoverage";
-import Footer from "@/components/Footer";
-import HomePage from "@/components/HomePage/Homepage";
-import DesktopNavbar from "@/components/HomePage/DesktopNavbar";
-import MobileNavbar from "@/components/HomePage/MobileNavbar";
-import Gallery from "@/components/Gallery/Gallery";
-import PartnersSlide from "@/components/PartnersSlide";
+
 import Loader from '@/components/Loader/Loader';
+import MobileNavbar from "@/components/HomePage/MobileNavbar";
+import DesktopNavbar from "@/components/HomePage/DesktopNavbar";
+import HomePage from "@/components/HomePage/Homepage";
+import Events from "@/components/Events";
+import Gallery from "@/components/Gallery/Gallery";
+import MediaCoverage from "@/components/MediaCoverage/MediaCoverage";
+import PartnersSlide from "@/components/PartnersSlide";
+import Footer from "@/components/Footer";
 
 // Custom hook to get window width
 const useWindowWidth = () => {
