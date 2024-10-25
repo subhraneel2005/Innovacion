@@ -1,6 +1,6 @@
 import React from 'react'
 import { MarqueeDemo } from './Partners'
-import StarryBackground from './StarryBackground/StarryBackground'
+import StarryBackground from '../StarryBackground/StarryBackground'
 
 export default function PartnersSlide() {
   return (
