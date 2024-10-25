@@ -1,6 +1,6 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import { FocusCards } from './ui/focus-cards';
+import { FocusCards } from '../ui/focus-cards';
 
 export function FocusCardsDemo() {
   const router = useRouter();
