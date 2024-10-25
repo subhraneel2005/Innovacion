@@ -1,4 +1,4 @@
-import IndividualEvent from '@/components/IndividualEvent'
+import IndividualEvent from '@/components/IndividualEvent/IndividualEvent'
 import React from 'react'
 import { Suspense } from 'react';
 

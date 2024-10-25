@@ -2,14 +2,14 @@
 import React, { useState, useEffect } from 'react';
 
 import Loader from '@/components/Loader/Loader';
-import MobileNavbar from "@/components/HomePage/MobileNavbar";
-import DesktopNavbar from "@/components/HomePage/DesktopNavbar";
+import MobileNavbar from "@/components/Navbar/MobileNavbar";
+import DesktopNavbar from "@/components/Navbar/DesktopNavbar";
 import HomePage from "@/components/HomePage/Homepage";
-import Events from "@/components/Events";
+import Events from "@/components/Events/Events";
 import Gallery from "@/components/Gallery/Gallery";
 import MediaCoverage from "@/components/MediaCoverage/MediaCoverage";
-import PartnersSlide from "@/components/PartnersSlide";
-import Footer from "@/components/Footer";
+import PartnersSlide from "@/components/Partners/PartnersSlide";
+import Footer from "@/components/Footer/Footer";
 
 // Custom hook to get window width
 const useWindowWidth = () => {

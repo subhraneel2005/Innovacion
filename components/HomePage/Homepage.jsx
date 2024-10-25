@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import RegisterBtn from '../RegisterBtn'
+import RegisterBtn from '../ui/RegisterBtn'
 import StarryBackground from '../StarryBackground/StarryBackground'
 
 function Homepage() {
