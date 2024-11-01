@@ -27,6 +27,16 @@ function MobileNavbar() {
         }
     };
 
+    const navigateToContactUsPage = () => {
+        router.push('/contactUs');
+        setIsMenuOpen(false); // Close the menu after navigation
+    }
+
+    const navigateToEventInfo = () => {
+        router.push('/eventInfo')
+        setIsMenuOpen(false)
+    }
+
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
@@ -58,11 +68,11 @@ function MobileNavbar() {
                     <span onClick={() => navigateToSection('/', 'events')} className="cursor-pointer">Events</span>
                     <span onClick={() => navigateToSection('/', 'gallery')} className="cursor-pointer">Gallery</span>
                     <span onClick={() => navigateToSection('/', 'partners')} className="cursor-pointer">Partners</span>
-                    <span onClick={() => navigateToSection('/', 'contact')} className="cursor-pointer">Contact</span>
+                    <span onClick={navigateToContactUsPage} className="cursor-pointer">Contact Us</span>
 
                     {/* Register Button */}
                     <div className="pt-2">
-                        <RegisterBtn text="Register" extraClass="h-[48px]" />
+                        <RegisterBtn text="Register" extraClass="h-[48px]" onClick={navigateToEventInfo} />
                     </div>
                 </div>
             </div>
