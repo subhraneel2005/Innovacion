@@ -48,7 +48,7 @@ function DesktopNavbar() {
         <span onClick={() => navigateToSection('/', 'events')} className='cursor-pointer'>Events</span>
         <span onClick={() => navigateToSection('/', 'gallery')} className='cursor-pointer'>Gallery</span>
         <span onClick={() => navigateToSection('/', 'partners')} className='cursor-pointer'>Partners</span>
-        <span onClick={navigateToContactUsPage} className='cursor-pointer'>Contact</span>
+        <span onClick={navigateToContactUsPage} className='cursor-pointer'>Contact Us</span>
       </div>
 
       {/* Register Button */}
