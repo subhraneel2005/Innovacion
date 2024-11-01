@@ -29,6 +29,10 @@ function DesktopNavbar() {
     router.push('/contactUs');
   }
 
+  const navigateToEventInfo = () => {
+    router.push('/eventInfo')
+  }
+
   return (
     <div className="flex justify-between items-center px-4 py-2 md:px-8 md:py-2 h-14 md:h-[4.5rem] w-max-full fixed top-0 left-0 right-0 bg-opacity-70 backdrop-blur-xl border-[#16423c] border-[1px] rounded-[10px] z-40 mx-[52px] my-3 md:mx-40 md:my-5">
 
@@ -49,7 +53,7 @@ function DesktopNavbar() {
 
       {/* Register Button */}
       <div className="hidden md:flex h-full">
-        <RegisterBtn text="Register" extraClass="h-full" />
+        <RegisterBtn text="Register" extraClass="h-full" onClick={navigateToEventInfo} />
       </div>
 
     </div>

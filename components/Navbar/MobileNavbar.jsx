@@ -32,6 +32,11 @@ function MobileNavbar() {
         setIsMenuOpen(false); // Close the menu after navigation
     }
 
+    const navigateToEventInfo = () => {
+        router.push('/eventInfo')
+        setIsMenuOpen(false)
+    }
+
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
@@ -67,7 +72,7 @@ function MobileNavbar() {
 
                     {/* Register Button */}
                     <div className="pt-2">
-                        <RegisterBtn text="Register" extraClass="h-[48px]" />
+                        <RegisterBtn text="Register" extraClass="h-[48px]" onClick={navigateToEventInfo} />
                     </div>
                 </div>
             </div>
