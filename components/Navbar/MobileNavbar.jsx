@@ -27,6 +27,11 @@ function MobileNavbar() {
         }
     };
 
+    const navigateToContactUsPage = () => {
+        router.push('/contactUs');
+        setIsMenuOpen(false); // Close the menu after navigation
+    }
+
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
@@ -58,7 +63,7 @@ function MobileNavbar() {
                     <span onClick={() => navigateToSection('/', 'events')} className="cursor-pointer">Events</span>
                     <span onClick={() => navigateToSection('/', 'gallery')} className="cursor-pointer">Gallery</span>
                     <span onClick={() => navigateToSection('/', 'partners')} className="cursor-pointer">Partners</span>
-                    <span onClick={() => navigateToSection('/', 'contact')} className="cursor-pointer">Contact</span>
+                    <span onClick={navigateToContactUsPage} className="cursor-pointer">Contact</span>
 
                     {/* Register Button */}
                     <div className="pt-2">
