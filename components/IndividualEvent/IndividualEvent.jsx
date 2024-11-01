@@ -130,7 +130,7 @@ function IndividualEvent() {
                                 <h1 className="text-2xl md:text-3xl font-[Ethnocentric] mb-2 text-white">
                                     {currentSubEvents[subEventIndex]?.title}
                                 </h1>
-                                <p className="text-xs md:text-base font-[Megatrans] leading-6 text-gray-300 text-left">
+                                <p className="text-xs md:text-base font-[Megatrans] leading-6 text-gray-300 text-justify">
                                     {currentSubEvents[subEventIndex]?.description}
                                 </p>
                             </div>

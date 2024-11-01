@@ -10,7 +10,7 @@ function Events() {
 
       <GradientBox extraClass="mb-8 flex justify-center items-center flex-col my-[100px] mx-[50px]">
         <h2 className="text-3xl md:text-[2.5rem] text-center font-[Ethnocentric] mb-10 text-white">About Innocavión</h2>
-        <p className="text-sm md:text-lg font-[Megatrans] leading-6 text-gray-300 text-center">
+        <p className="text-sm md:text-lg font-[Megatrans] leading-6 text-gray-300 text-justify">
           Institute of Engineering and Management, Kolkata in association with University of Engineering and Management, proudly presents the 12th edition of its Annual Techno-Management Fest, Innovación 2025. Innovación ignites intellects like celestial supernovas, a magnificent fusion of cutting-Edge technology and boundless creativity. Students will showcase their unparalleled brilliance, their ideas shining like stars in a limitless universe of innovation. Each day unfolds into a grand celebration, where invention soars to new dimensions. Embark on this stellar voyage and witness the uncharted realms of ingenuity and discovery!</p>
       </GradientBox>
 
