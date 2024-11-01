@@ -3,7 +3,7 @@ import GradientBox from '../ui/GradientBox'
 
 const ContactCard = ({ profilePic, name, department, phnNo }) => {
     return (
-        <GradientBox extraClass="mb-8 flex justify-center items-center flex-col md:flex-row gap-6 p-6 md:p-4 ">
+        <GradientBox extraClass="mb-8 flex items-center flex-col md:flex-row gap-6 p-6 md:p-4 ">
             <img
                 src={profilePic}
                 alt={name}
