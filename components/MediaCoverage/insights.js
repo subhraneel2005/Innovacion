@@ -1,0 +1,15 @@
+export const insights = [
+    "/Insights/1.jpeg",
+    "/Insights/3.jpeg",
+    "/Insights/5.jpeg",
+    "/Insights/6.jpeg",
+    "/Insights/11.jpeg",
+    "/Insights/9.jpeg",
+    "/Insights/2.jpeg",
+    "/Insights/4.jpeg",
+    "/Insights/7.jpeg",
+    "/Insights/8.jpeg",
+    "/Insights/10.jpeg",
+    "/Insights/12.jpeg",
+    "/Insights/13.jpeg",
+]
