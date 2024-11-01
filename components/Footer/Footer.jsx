@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaTwitter, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaFacebook, FaYoutube } from 'react-icons/fa';
 
 function Footer() {
   return (
@@ -15,16 +15,16 @@ function Footer() {
 
       {/* Icons */}
       <div className='flex gap-3 mt-3 md:mt-0'>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className='transition-transform duration-300 hover:scale-110'>
-          <FaTwitter className='text-gray-500 hover:text-blue-400 text-xl md:text-2xl' />
+        <a href="https://youtube.com/@ieminnovacion?si=UaehSHNNem0cjNwL" target="_blank" rel="noopener noreferrer" className='transition-transform duration-300 hover:scale-110'>
+          <FaYoutube className='text-gray-500 hover:text-red-500 text-xl md:text-2xl' />
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className='transition-transform duration-300 hover:scale-110'>
+        <a href="https://www.linkedin.com/in/iem-innovación-31183a32b" target="_blank" rel="noopener noreferrer" className='transition-transform duration-300 hover:scale-110'>
           <FaLinkedin className='text-gray-500 hover:text-blue-600 text-xl md:text-2xl' />
         </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className='transition-transform duration-300 hover:scale-110'>
+        <a href="https://www.instagram.com/ieminnovacion?igsh=MWoxcWNuMmdzeHJleA==" target="_blank" rel="noopener noreferrer" className='transition-transform duration-300 hover:scale-110'>
           <FaInstagram className='text-gray-500 hover:text-pink-400 text-xl md:text-2xl' />
         </a>
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className='transition-transform duration-300 hover:scale-110'>
+        <a href="https://www.facebook.com/share/aqpwFthLMk8fLgqh/" target="_blank" rel="noopener noreferrer" className='transition-transform duration-300 hover:scale-110'>
           <FaFacebook className='text-gray-500 hover:text-blue-600 text-xl md:text-2xl' />
         </a>
       </div>
