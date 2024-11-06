@@ -48,7 +48,7 @@ function MobileNavbar() {
                 {/* Logos */}
                 <div className="flex justify-start items-center space-x-4">
                     <img src="/Logo/iemLogo.webp" alt="IEM Logo" className='h-10' />
-                    <img src="/Logo/8.png" alt="Innovacion Logo" className='h-12' />
+                    <img src="/Logo/logo1.webp" alt="Innovacion Logo" className='h-12' />
                 </div>
 
                 {/* Hamburger Icon */}
