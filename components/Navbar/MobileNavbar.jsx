@@ -42,13 +42,13 @@ function MobileNavbar() {
     };
 
     return (
-        <div className="h-14 w-max-full fixed top-0 left-0 right-0 mx-8 my-4 border-[#16423c] border-[1px] rounded-[10px] z-40">
+        <div className="h-14 fixed top-0 left-0 right-0 mx-8 my-4 border-[#16423c] border-[1px] rounded-[10px] z-40">
 
-            <div className='h-full w-max-full flex justify-between items-center px-4 py-2 rounded-[10px]  backdrop-blur-lg '>
+            <div className='h-full w-full flex justify-between items-center px-4 py-2 rounded-[10px]  backdrop-blur-lg '>
                 {/* Logos */}
                 <div className="flex justify-start items-center space-x-4">
                     <img src="/Logo/iemLogo.webp" alt="IEM Logo" className='h-10' />
-                    <img src="/Logo/8.png" alt="Innovacion Logo" className='h-12' />
+                    <img src="/Logo/logo1.webp" alt="Innovacion Logo" className='h-12' />
                 </div>
 
                 {/* Hamburger Icon */}
@@ -61,7 +61,7 @@ function MobileNavbar() {
 
             {/* Fullscreen Menu Overlay */}
             <div
-                className={`fixed top-18 w-[83.5%] backdrop-blur-lg rounded-[10px] transition-all duration-500 ease-in-out overflow-hidden z-50 ${isMenuOpen ? 'max-h-screen border-[#16423c] border-[1px]' : 'max-h-0'}`}
+                className={`fixed top-18 left-0 right-0 mx-8 backdrop-blur-lg rounded-[10px] transition-all duration-500 ease-in-out overflow-hidden z-50 ${isMenuOpen ? 'max-h-screen border-[#16423c] border-[1px]' : 'max-h-0'}`}
             >
                 <div className="flex flex-col justify-center items-center h-full text-white space-y-6 font-[Megatrans] text-base py-10">
                     <span onClick={() => navigateToSection('/', 'homepage')} className="cursor-pointer" >Home</span>

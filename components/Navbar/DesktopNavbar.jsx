@@ -39,7 +39,7 @@ function DesktopNavbar() {
       {/* Logos */}
       <div className="flex justify-start items-center space-x-4 md:space-x-6">
         <img src="/Logo/iemLogo.webp" alt="IEM Logo" className='h-8 md:h-12 lg:h-14' />
-        <img src="/Logo/8.png" alt="Innovacion Logo" className='h-14 md:h-20 lg:h-20' />
+        <img src="/Logo/logo1.webp" alt="Innovacion Logo" className='h-14 md:h-20 lg:h-20' />
       </div>
 
       {/* Desktop Navigation */}

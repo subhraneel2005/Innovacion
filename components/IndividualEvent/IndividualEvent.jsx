@@ -138,7 +138,7 @@ function IndividualEvent() {
                             <img src={currentSubEvents[subEventIndex]?.src} alt={currentSubEvents[subEventIndex]?.title} className='md:hidden rounded-xl my-4 md:p-8 ' />
 
                             <div className="flex gap-4 md:mt-4 justify-center md:justify-start">
-                                <RegisterBtn text="Explore" extraClass="text-xs md:text-base h-[48px] md:h-[52px]" />
+                                <RegisterBtn text="Register" extraClass="text-xs md:text-base h-[48px] md:h-[52px]" />
                                 <button className="text-xs md:text-base h-[48px] md:h-[52px] z-10 font-[Megatrans] rounded-xl text-white bg-[#6A9C89] hover:bg-[#032221] px-4">
                                     Download Rules
                                 </button>
