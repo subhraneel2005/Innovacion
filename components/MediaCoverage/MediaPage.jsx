@@ -43,7 +43,7 @@ const MediaPage = () => {
 
             <div className="grid grid-cols-3 md:grid-cols-3 gap-x-20 gap-y-10 mb-6 mx-[50px] relative z-20">
                 {insights.map((insight) => (
-                    <img src={insight} alt={insight} className='h-80 w-80 rounded-xl' />
+                    <img key={insight} src={insight} alt={insight} className='h-80 w-80 rounded-xl' />
                 ))}
             </div>
         </div>
