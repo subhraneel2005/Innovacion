@@ -41,7 +41,7 @@ const MediaPage = () => {
             {isMobile ? <MobileNavbar /> : <DesktopNavbar />}
             <h1 className='text-3xl md:text-[2.5rem] font-[Ethnocentric] text-white text-center pt-[100px] pb-[30px] md:pt-[130px] md:pb-[40px] relative z-20'>Media Coverage</h1>
 
-            <div className="grid grid-cols-3 md:grid-cols-3 gap-x-20 gap-y-10 mb-6 mx-[50px] relative z-20">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-20 gap-y-10 mb-6 mx-[50px] relative z-20">
                 {insights.map((insight) => (
                     <img key={insight} src={insight} alt={insight} className='h-80 w-80 rounded-xl' />
                 ))}
