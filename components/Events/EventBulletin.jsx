@@ -44,7 +44,7 @@ const EventBulletin = () => {
 
             <div className='grid grid-rows-1 md:grid-cols-1 gap-x-6 mx-[50px] relative z-20'>
                 {EventBulletinData.map((data) => (
-                    <EventBulletinCard bannerPic={data.bannerPic} name={data.name} description={data.description} />
+                    <EventBulletinCard key={data.description} bannerPic={data.bannerPic} name={data.name} description={data.description} />
                 ))}
             </div>
 
