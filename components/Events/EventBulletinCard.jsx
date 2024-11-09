@@ -13,6 +13,7 @@ const EventBulletinCard = ({ bannerPic, name, description }) => {
     return (
         <GradientBox extraClass="mb-8 flex justify-center items-center flex-col md:flex-row gap-6 p-6 md:p-4 ">
             <img
+                loading='lazy'
                 src={bannerPic}
                 alt={name}
                 className="w-40 h-40 md:w-80 md:h-80 rounded-xl object-cover"

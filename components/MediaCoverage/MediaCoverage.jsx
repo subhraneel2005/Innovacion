@@ -20,9 +20,9 @@ function MediaCoverage() {
         <h2 className="text-3xl md:text-[2.5rem] font-[Ethnocentric] mb-16 text-white text-center">Insights about Innovación</h2>
         <GradientBox extraClass='w-full h-full flex justify-between items-center flex-col'>
           <div className='w-full h-full flex justify-between gap-6 md:items-center md:flex-row flex-col items-stretch'>
-            <img src="/Insights/1.jpeg" alt="1" className='h-72 md:w-1/3 rounded-xl' />
-            <img src="/Insights/2.jpeg" alt="2" className='h-72 md:w-1/3 rounded-xl my-4 md:my-0' />
-            <img src="/Insights/3.jpeg" alt="3" className='h-72 md:w-1/3 rounded-xl' />
+            <img src="/Insights/1.jpeg" alt="1" className='h-72 md:w-1/3 rounded-xl' loading='lazy' />
+            <img src="/Insights/2.jpeg" alt="2" className='h-72 md:w-1/3 rounded-xl my-4 md:my-0' loading='lazy' />
+            <img src="/Insights/3.jpeg" alt="3" className='h-72 md:w-1/3 rounded-xl' loading='lazy' />
           </div>
           <RegisterBtn text="Read More" extraClass="mt-6 md:h-[48px]" onClick={handleReadMore} />
 

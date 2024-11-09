@@ -77,7 +77,7 @@ const ReviewCard = ({ img, name }) => {
       )}
     >
       <div className="flex flex-col items-center justify-center ">
-        <img src={img} alt={name} className="w-32 h-32 md:w-40 md:h-40" />
+        <img src={img} alt={name} className="w-32 h-32 md:w-40 md:h-40" loading='lazy' />
 
       </div>
     </figure>

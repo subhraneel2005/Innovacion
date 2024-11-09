@@ -5,8 +5,8 @@ function Footer() {
   return (
     <div className='relative -top-20  px-4 lg:px-40 md:px-20 w-full flex flex-col md:flex-row justify-between items-center'>
       <div className='flex flex-row items-center gap-10 mb-4'>
-        <img src="/Logo/iemLogo.webp" alt="iem logo" className='w-24 h-24 md:w-32 md:h-32' />
-        <img src="/Logo/logo1.webp" alt="innovacion logo" className='w-24 h-24 md:w-32 md:h-32' />
+        <img src="/Logo/iemLogo.webp" alt="iem logo" className='w-24 h-24 md:w-32 md:h-32' loading='lazy' />
+        <img src="/Logo/logo1.webp" alt="innovacion logo" className='w-24 h-24 md:w-32 md:h-32' loading='lazy' />
       </div>
 
       <div className='text-center md:text-left text-xs text-gray-400 font-[Tasa-Regular] mb-4 md:my-0'>
