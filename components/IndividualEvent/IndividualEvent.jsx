@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import Image from 'next/image';
 
 import StarryBackground from '../StarryBackground/StarryBackground';
 import DesktopNavbar from "@/components/Navbar/DesktopNavbar";
@@ -135,7 +136,15 @@ function IndividualEvent() {
                                 </p>
                             </div>
 
-                            <img src={currentSubEvents[subEventIndex]?.src} alt={currentSubEvents[subEventIndex]?.title} className='md:hidden rounded-xl my-4 md:p-8 ' />
+                            <Image
+                                src={currentSubEvents[subEventIndex]?.src}
+                                alt={currentSubEvents[subEventIndex]?.title}
+                                className='md:hidden rounded-xl my-4 md:p-8'
+                                loading='lazy'
+                                layout="responsive"
+                                width={500}
+                                height={300}
+                            />
 
                             <div className="flex gap-4 md:mt-4 justify-center md:justify-start">
                                 <RegisterBtn text="Register" extraClass="text-xs md:text-base h-[48px] md:h-[52px]" />
@@ -147,10 +156,14 @@ function IndividualEvent() {
 
                         {/* Right Column */}
                         < div className="md:w-[40%] h-full flex justify-end" >
-                            <img
+                            <Image
                                 src={currentSubEvents[subEventIndex]?.src}
                                 alt={currentSubEvents[subEventIndex]?.title}
                                 className="w-full rounded-xl hidden md:block"
+                                loading='lazy'
+                                layout="responsive"
+                                width={500}
+                                height={300}
                             />
                         </ div>
                     </GradientBox >

@@ -1,12 +1,13 @@
 import React from 'react';
 import { FaLinkedin, FaInstagram, FaFacebook, FaYoutube } from 'react-icons/fa';
+import Image from 'next/image';
 
 function Footer() {
   return (
     <div className='relative -top-20  px-4 md:px-20 w-full flex flex-col lg:flex-row justify-between items-center'>
       <div className='flex flex-row items-center gap-10 mb-4'>
-        <img src="/Logo/iemLogo.webp" alt="iem logo" className='w-24 h-24 md:w-32 md:h-32' loading='lazy' />
-        <img src="/Logo/logo1.webp" alt="innovacion logo" className='w-24 h-24 md:w-32 md:h-32' loading='lazy' />
+        <Image src="/Logo/iemLogo.webp" alt="iem logo" width={96} height={96} loading='lazy' className='md:w-32 md:h-32' />
+        <Image src="/Logo/logo1.webp" alt="innovacion logo" width={96} height={96} loading='lazy' className='md:w-32 md:h-32' />
       </div>
 
       <div className='text-center md:text-left text-xs text-gray-400 font-[Tasa-Regular] mb-4 md:my-0'>

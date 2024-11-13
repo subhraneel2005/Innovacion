@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation'; // For Next.js
 import RegisterBtn from '../ui/RegisterBtn';
+import Image from 'next/image'; // {{ edit_1 }}
 
 function MobileNavbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,8 +48,8 @@ function MobileNavbar() {
             <div className='h-full w-full flex justify-between items-center px-4 py-2 rounded-[10px]  backdrop-blur-lg '>
                 {/* Logos */}
                 <div className="flex justify-start items-center space-x-4">
-                    <img src="/Logo/iemLogo.webp" alt="IEM Logo" className='h-10' />
-                    <img src="/Logo/logo1.webp" alt="Innovacion Logo" className='h-12' />
+                    <Image src="/Logo/iemLogo.webp" alt="IEM Logo" className='h-10' width={40} height={40} />
+                    <Image src="/Logo/logo1.webp" alt="Innovacion Logo" className='h-12' width={48} height={48} />
                 </div>
 
                 {/* Hamburger Icon */}

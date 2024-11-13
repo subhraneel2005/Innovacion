@@ -1,6 +1,7 @@
 import React from 'react';
 import Marquee from "@/components/magicui/marquee";
 import StarryBackground from '../StarryBackground/StarryBackground';
+import Image from 'next/image';
 
 import { galleryImagesData as images } from "./galleryImagesData.js"
 
@@ -8,11 +9,13 @@ const ReviewCard = ({ img }) => {
   return (
     <figure className="h-48 w-48 sm:h-56 sm:w-56 md:h-64 md:w-64 lg:h-80 lg:w-80 relative overflow-hidden rounded-xl mx-2 sm:mx-4 md:mx-6">
       <div className="flex items-center justify-center h-full w-full ease-in-out">
-        <img
+        <Image
           loading='lazy'
           src={img}
           alt="Gallery image"
           className="object-contain h-full w-full transition-transform duration-300 hover:scale-110"
+          layout="fill"
+          objectFit="contain"
         />
       </div>
     </figure>

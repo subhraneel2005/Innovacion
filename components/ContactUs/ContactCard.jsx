@@ -1,15 +1,18 @@
 import React from 'react'
 import GradientBox from '../ui/GradientBox'
 import { FaWhatsapp } from 'react-icons/fa'
+import Image from 'next/image'
 
 const ContactCard = ({ profilePic, name, department, phnNo, link }) => {
     return (
         <GradientBox extraClass="mb-8 flex items-center flex-col md:flex-row gap-6 p-6 md:p-4 ">
-            <img
+            <Image
                 loading='lazy'
                 src={profilePic}
                 alt={name}
-                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover"
+                width={160}
+                height={160}
+                className="rounded-full object-cover"
             />
             <div className="text-center flex flex-col items-center md:items-start md:text-left">
                 <h1 className="text-2xl md:text-xl text-white font-bold mb-2 font-[Ethnocentric]">{name}</h1>
