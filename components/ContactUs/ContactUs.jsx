@@ -44,7 +44,7 @@ const ContactUs = () => {
 
             <div className='grid grid-rows-1 md:grid-cols-2 gap-x-6 mx-[50px] relative z-20'>
                 {ContactData.map((contact) => (
-                    <ContactCard profilePic={contact.profilePic} name={contact.name} department={contact.department} phnNo={contact.phnNo} link={contact.link} />
+                    <ContactCard key={contact.phnNo} profilePic={contact.profilePic} name={contact.name} department={contact.department} phnNo={contact.phnNo} link={contact.link} />
                 ))}
             </div>
 
