@@ -3,6 +3,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation'; // For Next.js
 import RegisterBtn from '../ui/RegisterBtn';
+import Image from 'next/image'; // {{ edit_1 }}
 
 function DesktopNavbar() {
   const router = useRouter(); // Using Next.js router
@@ -38,8 +39,8 @@ function DesktopNavbar() {
 
       {/* Logos */}
       <div className="flex justify-start items-center space-x-4 md:space-x-6">
-        <img src="/Logo/iemLogo.webp" alt="IEM Logo" className='h-8 md:h-12 lg:h-14' />
-        <img src="/Logo/logo1.webp" alt="Innovacion Logo" className='h-14 md:h-20 lg:h-20' />
+        <Image src="/Logo/iemLogo.webp" alt="IEM Logo" className='h-8 md:h-12 lg:h-14' width={80} height={80} />
+        <Image src="/Logo/logo1.webp" alt="Innovacion Logo" className='h-14 md:h-20 lg:h-20' width={80} height={80} />
       </div>
 
       {/* Desktop Navigation */}
